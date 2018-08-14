@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  番属
+//
+//  Created by 王佳苗 on 2018/7/8.
+//  Copyright © 2018年 王佳苗. All rights reserved.
+//
+#import "UIBarButtonItem+Extension.h"
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+
+
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0)
+#define FSTabBarNormalColor RGB(137,137,137);   //tabBar颜色
+#define FSTabBarSelectedColor RGB(255, 255, 255);   //tabBar选中颜色
+#define FSThemeColor RGB(149, 75, 88);  //主题颜色
+#define FSBackgroundColor  RGB(249, 247, 247); //背景颜色
+#define FSSelectedColor RGB(225,225,225);  //cell高亮颜色
+#endif /* PrefixHeader_pch */

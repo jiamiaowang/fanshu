@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EA65D94C6EA0C45C3AFFEC7 /* libPods-番属.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B33D8AE10625C1299AD3301 /* libPods-番属.a */; };
+		D0038F732118798600992E89 /* FSVoteOptionNoImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0038F722118798600992E89 /* FSVoteOptionNoImgCell.m */; };
+		D004366520F88A9800AA1360 /* FSVote.m in Sources */ = {isa = PBXBuildFile; fileRef = D004366420F88A9800AA1360 /* FSVote.m */; };
+		D004366820F88AF900AA1360 /* FSVoteOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D004366720F88AF900AA1360 /* FSVoteOptions.m */; };
+		D004366B20F8934800AA1360 /* FSVoteAndArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = D004366A20F8934800AA1360 /* FSVoteAndArticle.m */; };
+		D004366F20F895EB00AA1360 /* FSAtricleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D004366D20F895EB00AA1360 /* FSAtricleViewCell.m */; };
+		D004367020F895EB00AA1360 /* FSAtricleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D004366E20F895EB00AA1360 /* FSAtricleViewCell.xib */; };
+		D004367620F8B10200AA1360 /* FSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D004367520F8B10200AA1360 /* FSSectionHeader.m */; };
+		D004367920F8B1F500AA1360 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D004367820F8B1F500AA1360 /* UIButton+Extension.m */; };
+		D004367C20F8D50C00AA1360 /* FSVoteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D004367B20F8D50C00AA1360 /* FSVoteViewCell.m */; };
+		D00D84952122A3AB0067F9A2 /* FSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D84942122A3AB0067F9A2 /* FSRegisterViewController.m */; };
+		D01037C720FDA6D20027B48A /* FSVoteOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01037C620FDA6D20027B48A /* FSVoteOptionViewController.m */; };
+		D033D0E720F38A6200B31A64 /* FSArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D0E620F38A6200B31A64 /* FSArticle.m */; };
+		D033D0F020F39DB000B31A64 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D033D0EC20F39DB000B31A64 /* 1.jpeg */; };
+		D033D0F120F39DB000B31A64 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D033D0ED20F39DB000B31A64 /* 2.jpeg */; };
+		D033D0F220F39DB000B31A64 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D033D0EE20F39DB000B31A64 /* 3.jpeg */; };
+		D033D0F320F39DB000B31A64 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D033D0EF20F39DB000B31A64 /* 4.jpeg */; };
+		D03975742119C794008222E5 /* FSVotePollController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03975732119C794008222E5 /* FSVotePollController.m */; };
+		D03AFEC720F3420D00639F44 /* FSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AFEC620F3420D00639F44 /* FSSearchBar.m */; };
+		D03AFECE20F34C9E00639F44 /* FSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AFECD20F34C9E00639F44 /* FSSearchViewController.m */; };
+		D03AFED220F350A400639F44 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AFED120F350A400639F44 /* UIBarButtonItem+Extension.m */; };
+		D03AFED620F356BF00639F44 /* FSImageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AFED520F356BF00639F44 /* FSImageHeader.m */; };
+		D0444D082120406000A8AC44 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D0444D072120406000A8AC44 /* NSString+Hash.m */; };
+		D0444D0C2120414A00A8AC44 /* FSNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D0444D0B2120414A00A8AC44 /* FSNetworkingTool.m */; };
+		D0444D0F21208FBA00A8AC44 /* UIAlertController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0444D0E21208FBA00A8AC44 /* UIAlertController+Extension.m */; };
+		D04A036220FF03D8007F11DD /* FSVoteOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036020FF03D8007F11DD /* FSVoteOptionCell.m */; };
+		D04A036320FF03D8007F11DD /* FSVoteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A036120FF03D8007F11DD /* FSVoteOptionCell.xib */; };
+		D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036620FF1658007F11DD /* FSVoteOptionHeader.m */; };
+		D04A036A20FF1FA4007F11DD /* FSVoteOptionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036920FF1FA4007F11DD /* FSVoteOptionFooter.m */; };
+		D071B3E8211C0CE4004A8A4E /* FSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */; };
+		D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */; };
+		D0781416211AD42800579643 /* FSVotePollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0781415211AD42800579643 /* FSVotePollCell.m */; };
+		D078141B211B07FE00579643 /* FSMoreVoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D078141A211B07FE00579643 /* FSMoreVoteController.m */; };
+		D0E924BD20F1F3BA00BA26CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924BC20F1F3BA00BA26CF /* main.m */; };
+		D0E924C020F1F3BA00BA26CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924BF20F1F3BA00BA26CF /* AppDelegate.m */; };
+		D0E924C320F1F3BA00BA26CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924C220F1F3BA00BA26CF /* ViewController.m */; };
+		D0E924C620F1F3BA00BA26CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E924C420F1F3BA00BA26CF /* Main.storyboard */; };
+		D0E924C820F1F3BA00BA26CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E924C720F1F3BA00BA26CF /* Assets.xcassets */; };
+		D0E924CB20F1F3BA00BA26CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E924C920F1F3BA00BA26CF /* LaunchScreen.storyboard */; };
+		D0E924E120F2192900BA26CF /* FSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924DF20F2192900BA26CF /* FSTabBarViewController.m */; };
+		D0E924E820F21A9500BA26CF /* FSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924E720F21A9500BA26CF /* FSMainViewController.m */; };
+		D0E924ED20F2202F00BA26CF /* FSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924EC20F2202F00BA26CF /* FSMineViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		335E78C964E48B5191E71983 /* Pods-番属.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-番属.debug.xcconfig"; path = "Pods/Target Support Files/Pods-番属/Pods-番属.debug.xcconfig"; sourceTree = "<group>"; };
+		4B33D8AE10625C1299AD3301 /* libPods-番属.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-番属.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE67D1962E84953A696258B8 /* Pods-番属.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-番属.release.xcconfig"; path = "Pods/Target Support Files/Pods-番属/Pods-番属.release.xcconfig"; sourceTree = "<group>"; };
+		D0038F712118798500992E89 /* FSVoteOptionNoImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionNoImgCell.h; path = vote/view/voteOption/FSVoteOptionNoImgCell.h; sourceTree = "<group>"; };
+		D0038F722118798600992E89 /* FSVoteOptionNoImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionNoImgCell.m; path = vote/view/voteOption/FSVoteOptionNoImgCell.m; sourceTree = "<group>"; };
+		D004366320F88A9800AA1360 /* FSVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVote.h; path = vote/model/FSVote.h; sourceTree = "<group>"; };
+		D004366420F88A9800AA1360 /* FSVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVote.m; path = vote/model/FSVote.m; sourceTree = "<group>"; };
+		D004366620F88AF900AA1360 /* FSVoteOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptions.h; path = vote/model/FSVoteOptions.h; sourceTree = "<group>"; };
+		D004366720F88AF900AA1360 /* FSVoteOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptions.m; path = vote/model/FSVoteOptions.m; sourceTree = "<group>"; };
+		D004366920F8934800AA1360 /* FSVoteAndArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteAndArticle.h; path = "首页/model/FSVoteAndArticle.h"; sourceTree = "<group>"; };
+		D004366A20F8934800AA1360 /* FSVoteAndArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteAndArticle.m; path = "首页/model/FSVoteAndArticle.m"; sourceTree = "<group>"; };
+		D004366C20F895EB00AA1360 /* FSAtricleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSAtricleViewCell.h; path = "首页/view/FSAtricleViewCell.h"; sourceTree = "<group>"; };
+		D004366D20F895EB00AA1360 /* FSAtricleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSAtricleViewCell.m; path = "首页/view/FSAtricleViewCell.m"; sourceTree = "<group>"; };
+		D004366E20F895EB00AA1360 /* FSAtricleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FSAtricleViewCell.xib; path = "首页/view/FSAtricleViewCell.xib"; sourceTree = "<group>"; };
+		D004367420F8B10200AA1360 /* FSSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSectionHeader.h; path = "首页/view/FSSectionHeader.h"; sourceTree = "<group>"; };
+		D004367520F8B10200AA1360 /* FSSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSectionHeader.m; path = "首页/view/FSSectionHeader.m"; sourceTree = "<group>"; };
+		D004367720F8B1F500AA1360 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Extension.h"; path = "other/category/UIButton+Extension.h"; sourceTree = "<group>"; };
+		D004367820F8B1F500AA1360 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Extension.m"; path = "other/category/UIButton+Extension.m"; sourceTree = "<group>"; };
+		D004367A20F8D50C00AA1360 /* FSVoteViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteViewCell.h; path = "首页/view/FSVoteViewCell.h"; sourceTree = "<group>"; };
+		D004367B20F8D50C00AA1360 /* FSVoteViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteViewCell.m; path = "首页/view/FSVoteViewCell.m"; sourceTree = "<group>"; };
+		D00D84932122A3AB0067F9A2 /* FSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSRegisterViewController.h; path = "我的/controller/FSRegisterViewController.h"; sourceTree = "<group>"; };
+		D00D84942122A3AB0067F9A2 /* FSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSRegisterViewController.m; path = "我的/controller/FSRegisterViewController.m"; sourceTree = "<group>"; };
+		D01037C520FDA6D20027B48A /* FSVoteOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionViewController.h; path = vote/controller/FSVoteOptionViewController.h; sourceTree = "<group>"; };
+		D01037C620FDA6D20027B48A /* FSVoteOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionViewController.m; path = vote/controller/FSVoteOptionViewController.m; sourceTree = "<group>"; };
+		D033D0E520F38A6200B31A64 /* FSArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticle.h; path = article/model/FSArticle.h; sourceTree = "<group>"; };
+		D033D0E620F38A6200B31A64 /* FSArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticle.m; path = article/model/FSArticle.m; sourceTree = "<group>"; };
+		D033D0EC20F39DB000B31A64 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		D033D0ED20F39DB000B31A64 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		D033D0EE20F39DB000B31A64 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		D033D0EF20F39DB000B31A64 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		D03975722119C794008222E5 /* FSVotePollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVotePollController.h; path = vote/controller/FSVotePollController.h; sourceTree = "<group>"; };
+		D03975732119C794008222E5 /* FSVotePollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVotePollController.m; path = vote/controller/FSVotePollController.m; sourceTree = "<group>"; };
+		D03AFEC520F3420D00639F44 /* FSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSearchBar.h; path = "搜索/view/nav导航/FSSearchBar.h"; sourceTree = "<group>"; };
+		D03AFEC620F3420D00639F44 /* FSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSearchBar.m; path = "搜索/view/nav导航/FSSearchBar.m"; sourceTree = "<group>"; };
+		D03AFECC20F34C9E00639F44 /* FSSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSSearchViewController.h; path = "搜索/controller/FSSearchViewController.h"; sourceTree = "<group>"; };
+		D03AFECD20F34C9E00639F44 /* FSSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSSearchViewController.m; path = "搜索/controller/FSSearchViewController.m"; sourceTree = "<group>"; };
+		D03AFED020F350A400639F44 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Extension.h"; path = "other/category/UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		D03AFED120F350A400639F44 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+Extension.m"; path = "other/category/UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		D03AFED420F356BF00639F44 /* FSImageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSImageHeader.h; path = "首页/view/FSImageHeader.h"; sourceTree = "<group>"; };
+		D03AFED520F356BF00639F44 /* FSImageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSImageHeader.m; path = "首页/view/FSImageHeader.m"; sourceTree = "<group>"; };
+		D0444D062120406000A8AC44 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		D0444D072120406000A8AC44 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		D0444D0A2120414A00A8AC44 /* FSNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSNetworkingTool.h; path = other/tool/FSNetworkingTool.h; sourceTree = "<group>"; };
+		D0444D0B2120414A00A8AC44 /* FSNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSNetworkingTool.m; path = other/tool/FSNetworkingTool.m; sourceTree = "<group>"; };
+		D0444D0D21208FB900A8AC44 /* UIAlertController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Extension.h"; path = "other/category/UIAlertController+Extension.h"; sourceTree = "<group>"; };
+		D0444D0E21208FBA00A8AC44 /* UIAlertController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Extension.m"; path = "other/category/UIAlertController+Extension.m"; sourceTree = "<group>"; };
+		D04A035F20FF03D8007F11DD /* FSVoteOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionCell.h; path = vote/view/voteOption/FSVoteOptionCell.h; sourceTree = "<group>"; };
+		D04A036020FF03D8007F11DD /* FSVoteOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionCell.m; path = vote/view/voteOption/FSVoteOptionCell.m; sourceTree = "<group>"; };
+		D04A036120FF03D8007F11DD /* FSVoteOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FSVoteOptionCell.xib; path = vote/view/voteOption/FSVoteOptionCell.xib; sourceTree = "<group>"; };
+		D04A036520FF1658007F11DD /* FSVoteOptionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionHeader.h; path = vote/view/voteOption/FSVoteOptionHeader.h; sourceTree = "<group>"; };
+		D04A036620FF1658007F11DD /* FSVoteOptionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionHeader.m; path = vote/view/voteOption/FSVoteOptionHeader.m; sourceTree = "<group>"; };
+		D04A036820FF1FA4007F11DD /* FSVoteOptionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionFooter.h; path = vote/view/voteOption/FSVoteOptionFooter.h; sourceTree = "<group>"; };
+		D04A036920FF1FA4007F11DD /* FSVoteOptionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionFooter.m; path = vote/view/voteOption/FSVoteOptionFooter.m; sourceTree = "<group>"; };
+		D071B3E5211C0CE4004A8A4E /* FSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSLoginViewController.h; path = "我的/controller/FSLoginViewController.h"; sourceTree = "<group>"; };
+		D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSLoginViewController.m; path = "我的/controller/FSLoginViewController.m"; sourceTree = "<group>"; };
+		D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUnderlineTextField.h; path = "我的/view/FSUnderlineTextField.h"; sourceTree = "<group>"; };
+		D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSUnderlineTextField.m; path = "我的/view/FSUnderlineTextField.m"; sourceTree = "<group>"; };
+		D0781414211AD42800579643 /* FSVotePollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVotePollCell.h; path = vote/view/FSVotePollCell.h; sourceTree = "<group>"; };
+		D0781415211AD42800579643 /* FSVotePollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVotePollCell.m; path = vote/view/FSVotePollCell.m; sourceTree = "<group>"; };
+		D0781419211B07FE00579643 /* FSMoreVoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMoreVoteController.h; path = vote/controller/FSMoreVoteController.h; sourceTree = "<group>"; };
+		D078141A211B07FE00579643 /* FSMoreVoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMoreVoteController.m; path = vote/controller/FSMoreVoteController.m; sourceTree = "<group>"; };
+		D0E924B820F1F3BA00BA26CF /* 番属.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "番属.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0E924BC20F1F3BA00BA26CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0E924BE20F1F3BA00BA26CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0E924BF20F1F3BA00BA26CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0E924C120F1F3BA00BA26CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0E924C220F1F3BA00BA26CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0E924C520F1F3BA00BA26CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0E924C720F1F3BA00BA26CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0E924CA20F1F3BA00BA26CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0E924CC20F1F3BA00BA26CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E924D620F210C900BA26CF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = other/PrefixHeader.pch; sourceTree = "<group>"; };
+		D0E924DE20F2192900BA26CF /* FSTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSTabBarViewController.h; path = other/cotroller/FSTabBarViewController.h; sourceTree = "<group>"; };
+		D0E924DF20F2192900BA26CF /* FSTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSTabBarViewController.m; path = other/cotroller/FSTabBarViewController.m; sourceTree = "<group>"; };
+		D0E924E620F21A9500BA26CF /* FSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMainViewController.h; path = "首页/controller/FSMainViewController.h"; sourceTree = "<group>"; };
+		D0E924E720F21A9500BA26CF /* FSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMainViewController.m; path = "首页/controller/FSMainViewController.m"; sourceTree = "<group>"; };
+		D0E924EB20F2202F00BA26CF /* FSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMineViewController.h; path = "我的/controller/FSMineViewController.h"; sourceTree = "<group>"; };
+		D0E924EC20F2202F00BA26CF /* FSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMineViewController.m; path = "我的/controller/FSMineViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0E924B520F1F3BA00BA26CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA65D94C6EA0C45C3AFFEC7 /* libPods-番属.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		055D994E8F0C0DBEA2A16114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B33D8AE10625C1299AD3301 /* libPods-番属.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78676EE7AAE2715915E4C63C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				335E78C964E48B5191E71983 /* Pods-番属.debug.xcconfig */,
+				BE67D1962E84953A696258B8 /* Pods-番属.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D033D0EB20F39DB000B31A64 /* imageLoop */ = {
+			isa = PBXGroup;
+			children = (
+				D033D0EC20F39DB000B31A64 /* 1.jpeg */,
+				D033D0ED20F39DB000B31A64 /* 2.jpeg */,
+				D033D0EE20F39DB000B31A64 /* 3.jpeg */,
+				D033D0EF20F39DB000B31A64 /* 4.jpeg */,
+			);
+			path = imageLoop;
+			sourceTree = "<group>";
+		};
+		D03975452119872E008222E5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */,
+				D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D039756A21199B16008222E5 /* vote */ = {
+			isa = PBXGroup;
+			children = (
+				D039756B21199B26008222E5 /* controller */,
+				D039756C21199B2F008222E5 /* view */,
+				D039756D21199B35008222E5 /* model */,
+			);
+			name = vote;
+			sourceTree = "<group>";
+		};
+		D039756B21199B26008222E5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D01037C520FDA6D20027B48A /* FSVoteOptionViewController.h */,
+				D01037C620FDA6D20027B48A /* FSVoteOptionViewController.m */,
+				D03975722119C794008222E5 /* FSVotePollController.h */,
+				D03975732119C794008222E5 /* FSVotePollController.m */,
+				D0781419211B07FE00579643 /* FSMoreVoteController.h */,
+				D078141A211B07FE00579643 /* FSMoreVoteController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D039756C21199B2F008222E5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D04A036420FF15BE007F11DD /* voteOption */,
+				D0781414211AD42800579643 /* FSVotePollCell.h */,
+				D0781415211AD42800579643 /* FSVotePollCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D039756D21199B35008222E5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D004366320F88A9800AA1360 /* FSVote.h */,
+				D004366420F88A9800AA1360 /* FSVote.m */,
+				D004366620F88AF900AA1360 /* FSVoteOptions.h */,
+				D004366720F88AF900AA1360 /* FSVoteOptions.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D039756E21199B93008222E5 /* article */ = {
+			isa = PBXGroup;
+			children = (
+				D039757121199BB7008222E5 /* model */,
+				D039757021199BB2008222E5 /* view */,
+				D039756F21199BAC008222E5 /* controller */,
+			);
+			name = article;
+			sourceTree = "<group>";
+		};
+		D039756F21199BAC008222E5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D039757021199BB2008222E5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D039757121199BB7008222E5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D033D0E520F38A6200B31A64 /* FSArticle.h */,
+				D033D0E620F38A6200B31A64 /* FSArticle.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D03AFEC420F341BE00639F44 /* nav导航 */ = {
+			isa = PBXGroup;
+			children = (
+				D03AFEC520F3420D00639F44 /* FSSearchBar.h */,
+				D03AFEC620F3420D00639F44 /* FSSearchBar.m */,
+			);
+			name = "nav导航";
+			sourceTree = "<group>";
+		};
+		D03AFEC820F34C2D00639F44 /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				D03AFEC920F34C3B00639F44 /* controller */,
+				D03AFECB20F34C4900639F44 /* model */,
+				D03AFECA20F34C4300639F44 /* view */,
+			);
+			name = "搜索";
+			sourceTree = "<group>";
+		};
+		D03AFEC920F34C3B00639F44 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D03AFECC20F34C9E00639F44 /* FSSearchViewController.h */,
+				D03AFECD20F34C9E00639F44 /* FSSearchViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D03AFECA20F34C4300639F44 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D03AFEC420F341BE00639F44 /* nav导航 */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D03AFECB20F34C4900639F44 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D03AFECF20F3500800639F44 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				D03AFED020F350A400639F44 /* UIBarButtonItem+Extension.h */,
+				D03AFED120F350A400639F44 /* UIBarButtonItem+Extension.m */,
+				D004367720F8B1F500AA1360 /* UIButton+Extension.h */,
+				D004367820F8B1F500AA1360 /* UIButton+Extension.m */,
+				D0444D0D21208FB900A8AC44 /* UIAlertController+Extension.h */,
+				D0444D0E21208FBA00A8AC44 /* UIAlertController+Extension.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		D03AFED320F355FA00639F44 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924E220F21A1200BA26CF /* 首页 */,
+				D039756A21199B16008222E5 /* vote */,
+				D039756E21199B93008222E5 /* article */,
+				D03AFEC820F34C2D00639F44 /* 搜索 */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		D0444D052120406000A8AC44 /* md5_hmac */ = {
+			isa = PBXGroup;
+			children = (
+				D0444D062120406000A8AC44 /* NSString+Hash.h */,
+				D0444D072120406000A8AC44 /* NSString+Hash.m */,
+			);
+			path = md5_hmac;
+			sourceTree = "<group>";
+		};
+		D0444D092120413B00A8AC44 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				D0444D0A2120414A00A8AC44 /* FSNetworkingTool.h */,
+				D0444D0B2120414A00A8AC44 /* FSNetworkingTool.m */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		D04A036420FF15BE007F11DD /* voteOption */ = {
+			isa = PBXGroup;
+			children = (
+				D04A035F20FF03D8007F11DD /* FSVoteOptionCell.h */,
+				D04A036020FF03D8007F11DD /* FSVoteOptionCell.m */,
+				D04A036120FF03D8007F11DD /* FSVoteOptionCell.xib */,
+				D0038F712118798500992E89 /* FSVoteOptionNoImgCell.h */,
+				D0038F722118798600992E89 /* FSVoteOptionNoImgCell.m */,
+				D04A036520FF1658007F11DD /* FSVoteOptionHeader.h */,
+				D04A036620FF1658007F11DD /* FSVoteOptionHeader.m */,
+				D04A036820FF1FA4007F11DD /* FSVoteOptionFooter.h */,
+				D04A036920FF1FA4007F11DD /* FSVoteOptionFooter.m */,
+			);
+			name = voteOption;
+			sourceTree = "<group>";
+		};
+		D0E924AF20F1F3BA00BA26CF = {
+			isa = PBXGroup;
+			children = (
+				D0E924BA20F1F3BA00BA26CF /* 番属 */,
+				D0E924B920F1F3BA00BA26CF /* Products */,
+				78676EE7AAE2715915E4C63C /* Pods */,
+				055D994E8F0C0DBEA2A16114 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0E924B920F1F3BA00BA26CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924B820F1F3BA00BA26CF /* 番属.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0E924BA20F1F3BA00BA26CF /* 番属 */ = {
+			isa = PBXGroup;
+			children = (
+				D0444D052120406000A8AC44 /* md5_hmac */,
+				D033D0EB20F39DB000B31A64 /* imageLoop */,
+				D03AFED320F355FA00639F44 /* 首页 */,
+				D0E924E920F21ABA00BA26CF /* 我的 */,
+				D0E924D720F217BF00BA26CF /* other */,
+				D0E924BE20F1F3BA00BA26CF /* AppDelegate.h */,
+				D0E924BF20F1F3BA00BA26CF /* AppDelegate.m */,
+				D0E924C120F1F3BA00BA26CF /* ViewController.h */,
+				D0E924C220F1F3BA00BA26CF /* ViewController.m */,
+				D0E924C420F1F3BA00BA26CF /* Main.storyboard */,
+				D0E924C720F1F3BA00BA26CF /* Assets.xcassets */,
+				D0E924C920F1F3BA00BA26CF /* LaunchScreen.storyboard */,
+				D0E924CC20F1F3BA00BA26CF /* Info.plist */,
+				D0E924BB20F1F3BA00BA26CF /* Supporting Files */,
+			);
+			path = "番属";
+			sourceTree = "<group>";
+		};
+		D0E924BB20F1F3BA00BA26CF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924BC20F1F3BA00BA26CF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0E924D720F217BF00BA26CF /* other */ = {
+			isa = PBXGroup;
+			children = (
+				D0444D092120413B00A8AC44 /* tool */,
+				D03AFECF20F3500800639F44 /* category */,
+				D0E924D820F217CE00BA26CF /* controller */,
+				D0E924D620F210C900BA26CF /* PrefixHeader.pch */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		D0E924D820F217CE00BA26CF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924DE20F2192900BA26CF /* FSTabBarViewController.h */,
+				D0E924DF20F2192900BA26CF /* FSTabBarViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D0E924E220F21A1200BA26CF /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924E320F21A2900BA26CF /* controller */,
+				D0E924E520F21A3600BA26CF /* model */,
+				D0E924E420F21A3100BA26CF /* view */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		D0E924E320F21A2900BA26CF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924E620F21A9500BA26CF /* FSMainViewController.h */,
+				D0E924E720F21A9500BA26CF /* FSMainViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		D0E924E420F21A3100BA26CF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D03AFED420F356BF00639F44 /* FSImageHeader.h */,
+				D03AFED520F356BF00639F44 /* FSImageHeader.m */,
+				D004366C20F895EB00AA1360 /* FSAtricleViewCell.h */,
+				D004366D20F895EB00AA1360 /* FSAtricleViewCell.m */,
+				D004366E20F895EB00AA1360 /* FSAtricleViewCell.xib */,
+				D004367420F8B10200AA1360 /* FSSectionHeader.h */,
+				D004367520F8B10200AA1360 /* FSSectionHeader.m */,
+				D004367A20F8D50C00AA1360 /* FSVoteViewCell.h */,
+				D004367B20F8D50C00AA1360 /* FSVoteViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		D0E924E520F21A3600BA26CF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D004366920F8934800AA1360 /* FSVoteAndArticle.h */,
+				D004366A20F8934800AA1360 /* FSVoteAndArticle.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		D0E924E920F21ABA00BA26CF /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924EA20F21E2600BA26CF /* controller */,
+				D03975452119872E008222E5 /* view */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		D0E924EA20F21E2600BA26CF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0E924EB20F2202F00BA26CF /* FSMineViewController.h */,
+				D0E924EC20F2202F00BA26CF /* FSMineViewController.m */,
+				D071B3E5211C0CE4004A8A4E /* FSLoginViewController.h */,
+				D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */,
+				D00D84932122A3AB0067F9A2 /* FSRegisterViewController.h */,
+				D00D84942122A3AB0067F9A2 /* FSRegisterViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0E924B720F1F3BA00BA26CF /* 番属 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0E924CF20F1F3BA00BA26CF /* Build configuration list for PBXNativeTarget "番属" */;
+			buildPhases = (
+				C944BC42F8723A62B9EE60C8 /* [CP] Check Pods Manifest.lock */,
+				D0E924B420F1F3BA00BA26CF /* Sources */,
+				D0E924B520F1F3BA00BA26CF /* Frameworks */,
+				D0E924B620F1F3BA00BA26CF /* Resources */,
+				54819E85CA78341BD5269676 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "番属";
+			productName = "番属";
+			productReference = D0E924B820F1F3BA00BA26CF /* 番属.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0E924B020F1F3BA00BA26CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "王佳苗";
+				TargetAttributes = {
+					D0E924B720F1F3BA00BA26CF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 25A9SK8Z73;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D0E924B320F1F3BA00BA26CF /* Build configuration list for PBXProject "番属" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0E924AF20F1F3BA00BA26CF;
+			productRefGroup = D0E924B920F1F3BA00BA26CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0E924B720F1F3BA00BA26CF /* 番属 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0E924B620F1F3BA00BA26CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D033D0F120F39DB000B31A64 /* 2.jpeg in Resources */,
+				D0E924CB20F1F3BA00BA26CF /* LaunchScreen.storyboard in Resources */,
+				D004367020F895EB00AA1360 /* FSAtricleViewCell.xib in Resources */,
+				D0E924C820F1F3BA00BA26CF /* Assets.xcassets in Resources */,
+				D04A036320FF03D8007F11DD /* FSVoteOptionCell.xib in Resources */,
+				D033D0F220F39DB000B31A64 /* 3.jpeg in Resources */,
+				D033D0F320F39DB000B31A64 /* 4.jpeg in Resources */,
+				D0E924C620F1F3BA00BA26CF /* Main.storyboard in Resources */,
+				D033D0F020F39DB000B31A64 /* 1.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54819E85CA78341BD5269676 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-番属/Pods-番属-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-番属/Pods-番属-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C944BC42F8723A62B9EE60C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-番属-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0E924B420F1F3BA00BA26CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0E924C320F1F3BA00BA26CF /* ViewController.m in Sources */,
+				D03AFECE20F34C9E00639F44 /* FSSearchViewController.m in Sources */,
+				D0E924E120F2192900BA26CF /* FSTabBarViewController.m in Sources */,
+				D004367620F8B10200AA1360 /* FSSectionHeader.m in Sources */,
+				D004367920F8B1F500AA1360 /* UIButton+Extension.m in Sources */,
+				D04A036220FF03D8007F11DD /* FSVoteOptionCell.m in Sources */,
+				D01037C720FDA6D20027B48A /* FSVoteOptionViewController.m in Sources */,
+				D004366F20F895EB00AA1360 /* FSAtricleViewCell.m in Sources */,
+				D0E924C020F1F3BA00BA26CF /* AppDelegate.m in Sources */,
+				D0444D0C2120414A00A8AC44 /* FSNetworkingTool.m in Sources */,
+				D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */,
+				D0038F732118798600992E89 /* FSVoteOptionNoImgCell.m in Sources */,
+				D0E924ED20F2202F00BA26CF /* FSMineViewController.m in Sources */,
+				D004366820F88AF900AA1360 /* FSVoteOptions.m in Sources */,
+				D03AFEC720F3420D00639F44 /* FSSearchBar.m in Sources */,
+				D078141B211B07FE00579643 /* FSMoreVoteController.m in Sources */,
+				D004366B20F8934800AA1360 /* FSVoteAndArticle.m in Sources */,
+				D033D0E720F38A6200B31A64 /* FSArticle.m in Sources */,
+				D00D84952122A3AB0067F9A2 /* FSRegisterViewController.m in Sources */,
+				D04A036A20FF1FA4007F11DD /* FSVoteOptionFooter.m in Sources */,
+				D03AFED220F350A400639F44 /* UIBarButtonItem+Extension.m in Sources */,
+				D0E924BD20F1F3BA00BA26CF /* main.m in Sources */,
+				D0444D082120406000A8AC44 /* NSString+Hash.m in Sources */,
+				D0E924E820F21A9500BA26CF /* FSMainViewController.m in Sources */,
+				D0781416211AD42800579643 /* FSVotePollCell.m in Sources */,
+				D03975742119C794008222E5 /* FSVotePollController.m in Sources */,
+				D004367C20F8D50C00AA1360 /* FSVoteViewCell.m in Sources */,
+				D004366520F88A9800AA1360 /* FSVote.m in Sources */,
+				D0444D0F21208FBA00A8AC44 /* UIAlertController+Extension.m in Sources */,
+				D03AFED620F356BF00639F44 /* FSImageHeader.m in Sources */,
+				D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */,
+				D071B3E8211C0CE4004A8A4E /* FSLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0E924C420F1F3BA00BA26CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E924C520F1F3BA00BA26CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0E924C920F1F3BA00BA26CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0E924CA20F1F3BA00BA26CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0E924CD20F1F3BA00BA26CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0E924CE20F1F3BA00BA26CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0E924D020F1F3BA00BA26CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335E78C964E48B5191E71983 /* Pods-番属.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 25A9SK8Z73;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/番属/other/PrefixHeader.pch";
+				INFOPLIST_FILE = "番属/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jia.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0E924D120F1F3BA00BA26CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE67D1962E84953A696258B8 /* Pods-番属.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 25A9SK8Z73;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/番属/other/PrefixHeader.pch";
+				INFOPLIST_FILE = "番属/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jia.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0E924B320F1F3BA00BA26CF /* Build configuration list for PBXProject "番属" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E924CD20F1F3BA00BA26CF /* Debug */,
+				D0E924CE20F1F3BA00BA26CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0E924CF20F1F3BA00BA26CF /* Build configuration list for PBXNativeTarget "番属" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E924D020F1F3BA00BA26CF /* Debug */,
+				D0E924D120F1F3BA00BA26CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0E924B020F1F3BA00BA26CF /* Project object */;
+}
