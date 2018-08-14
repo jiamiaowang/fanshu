@@ -24,6 +24,7 @@
 
 //跳转界面
 #import "FSVoteOptionViewController.h"
+#import "FSVotePollController.h"
 #import "FSSearchViewController.h"
 #import "FSLoginViewController.h"
 
@@ -117,7 +118,9 @@ extern BOOL islogin;
 //设置刷新
 -(void)setupRefrensh{
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-//    [self.tableView.mj_header beginRefreshing];
+    
+    
+    [self.tableView.mj_header beginRefreshing];
 
 }
 - (void)didReceiveMemoryWarning {
@@ -221,14 +224,24 @@ extern BOOL islogin;
     
     //调转投票选项
     if(indexPath.section==0){
-        self.hidesBottomBarWhenPushed=YES;
         FSVote *vote=self.voteAndArticle.vote[indexPath.row];
+        [self isVoted:vote];
+    }
+}
+//根据请求结果决定该跳转的界面
+-(void)whichVC:(int)isvoted vote:(FSVote *)vote{
+    self.hidesBottomBarWhenPushed=YES;
+    if(isvoted ==0){
         FSVoteOptionViewController *voteOptionVC=[[FSVoteOptionViewController alloc]init];
         voteOptionVC.vote=vote;
         [self.navigationController pushViewController:voteOptionVC animated:YES];
-        self.hidesBottomBarWhenPushed=NO;
-        
     }
+    else{
+        FSVotePollController *pollVC=[[FSVotePollController alloc]init];
+        pollVC.vote=vote;
+        [self.navigationController pushViewController:pollVC animated:YES];
+    }
+    self.hidesBottomBarWhenPushed=NO;
 }
 #pragma mark - 网络请求
 -(void)loadNewData{
@@ -249,7 +262,18 @@ extern BOOL islogin;
                 }];
 
 }
-
+//获取判断该用户是否以投票
+-(void)isVoted:(FSVote *)vote{
+    NSString *url=[NSString stringWithFormat:@"vote/isVoted?vote_id=%d",vote.vote_id];
+    [[FSNetworkingTool shareNetworkingTool]GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        int isvoted=[responseObject[@"isvoted"] intValue];
+//        NSLog(@"%d",isvoted);
+        [self whichVC:isvoted vote:vote];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+}
 
 
 @end

@@ -15,6 +15,8 @@
 
 //跳转界面
 #import "FSVoteOptionViewController.h"
+#import "FSVotePollController.h"
+#import "FSPublishVoteViewController.h"
 
 #import "FSNetworkingTool.h"
 //第三方
@@ -51,13 +53,24 @@
     self.navigationItem.leftBarButtonItem=backItem;
     self.navigationItem.title=@"投票";
     
+    UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"publish"] style:UIBarButtonItemStylePlain target:self action:@selector(publishVote)];
+    self.navigationItem.rightBarButtonItem=rightItem;
+    
 }
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(void)publishVote{
+    self.hidesBottomBarWhenPushed=YES;
+    FSPublishVoteViewController *publishVC=[[FSPublishVoteViewController alloc]init];
+    [self.navigationController pushViewController:publishVC animated:YES];
+}
 //设置刷新
 -(void)setupRefrensh{
     self.tableView.mj_header =[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+                                                                    refreshingAction:@selector(loadMoreData)];
 }
 #pragma mark - 懒加载
 -(UITableView *)tableView{
@@ -88,9 +101,22 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     FSVote *vote=self.voteArray[indexPath.row];
-    FSVoteOptionViewController *optionVC=[[FSVoteOptionViewController alloc]init];
-    optionVC.vote=vote;
-    [self.navigationController pushViewController:optionVC animated:YES];
+    [self isVoted:vote];
+}
+//根据请求结果决定该跳转的界面
+-(void)whichVC:(int)isvoted vote:(FSVote *)vote{
+    self.hidesBottomBarWhenPushed=YES;
+    if(isvoted ==0){
+        FSVoteOptionViewController *voteOptionVC=[[FSVoteOptionViewController alloc]init];
+        voteOptionVC.vote=vote;
+        [self.navigationController pushViewController:voteOptionVC animated:YES];
+    }
+    else{
+        FSVotePollController *pollVC=[[FSVotePollController alloc]init];
+        pollVC.vote=vote;
+        [self.navigationController pushViewController:pollVC animated:YES];
+    }
+    self.hidesBottomBarWhenPushed=NO;
 }
 #pragma mark - 网络加载
 -(void)loadNewData{
@@ -104,5 +130,19 @@
 
     }];
 }
-
+-(void)loadMoreData{
+    [self.tableView.mj_footer endRefreshing];
+}
+//获取判断该用户是否以投票
+-(void)isVoted:(FSVote *)vote{
+    NSString *url=[NSString stringWithFormat:@"vote/isVoted?vote_id=%d",vote.vote_id];
+    [[FSNetworkingTool shareNetworkingTool]GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        int isvoted=[responseObject[@"isvoted"] intValue];
+        //        NSLog(@"%d",isvoted);
+        [self whichVC:isvoted vote:vote];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+}
 @end

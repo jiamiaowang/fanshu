@@ -13,7 +13,7 @@
     static id networkTool=nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSURL *baseUrl=[NSURL URLWithString:@"http://127.0.0.1/fanshu/"];
+        NSURL *baseUrl=[NSURL URLWithString:@"http://192.168.0.101/fanshu/"];
         NSURLSessionConfiguration *configuration=[NSURLSessionConfiguration defaultSessionConfiguration];
         //设置请求超时时长
         configuration.timeoutIntervalForRequest=15;

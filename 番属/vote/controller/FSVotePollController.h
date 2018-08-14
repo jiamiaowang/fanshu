@@ -10,4 +10,5 @@
 @class FSVote;
 @interface FSVotePollController : UIViewController
 @property(nonatomic,strong)FSVote *vote;
+@property(nonatomic,assign)int backnum;
 @end

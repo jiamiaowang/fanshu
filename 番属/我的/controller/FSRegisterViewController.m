@@ -93,7 +93,7 @@ extern BOOL islogin;
         make.width.equalTo(self.accountText);
         make.height.equalTo(self.accountText);
     }];
-    
+    self.passwordText.delegate=self;
     //输入变点
     self.passwordText.secureTextEntry=YES;
     self.passwordText.delegate=self;
@@ -178,7 +178,7 @@ extern BOOL islogin;
     [dict setValue:passwordStr forKey:@"password"];
     [dict setValue:usernameStr forKey:@"username"];
     [[FSNetworkingTool shareNetworkingTool]POST:@"login/register.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
         NSString *result=responseObject[@"isSuccess"];
         [self canRegister:result];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -198,12 +198,21 @@ extern BOOL islogin;
         return;
     }
 }
+#pragma mark - textfiled delegate
+//处理回车事件
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self gotoRegister];
+    return YES;
+}
 #pragma mark - 添加键盘通知
 -(void)addNoticeForKeyboard{
     //键盘出现的通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     //键盘消失的通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)keyboardWillShow:(NSNotification *)notification{
 //        NSLog(@"键盘弹出");

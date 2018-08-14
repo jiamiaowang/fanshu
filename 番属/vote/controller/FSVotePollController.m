@@ -52,7 +52,11 @@
 }
 //返回到首页
 -(void)back{
-    
+    if(self.backnum==1){
+        long index=[[self.navigationController viewControllers]indexOfObject:self];
+        
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index-2]animated:YES];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)setOptions:(NSArray *)options{

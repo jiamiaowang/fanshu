@@ -205,6 +205,7 @@
         self.hidesBottomBarWhenPushed=YES;
         FSVotePollController *pollVC=[[FSVotePollController alloc]init];
         pollVC.vote=self.vote;
+        pollVC.backnum=1;
         [self.navigationController pushViewController:pollVC animated:YES];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

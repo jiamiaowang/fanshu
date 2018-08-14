@@ -76,7 +76,6 @@ extern BOOL islogin;
     }];
     self.accountText.keyboardType=UIKeyboardTypeNumberPad;
     self.accountText.delegate=self;
-    
     //密码
     self.passwordText=[FSUnderlineTextField createTextField:@"密码"];
     [self.view addSubview:self.passwordText];
@@ -102,7 +101,7 @@ extern BOOL islogin;
     
     
     //登陆按钮
-    self.loginButton=[UIButton buttonWithTitle:@"登录" font:[UIFont systemFontOfSize:15] textColor:[UIColor whiteColor] target:self action:@selector(login)];
+    self.loginButton=[UIButton buttonWithTitle:@"登录" font:[UIFont systemFontOfSize:15] textColor:[UIColor whiteColor] target:self action:@selector(gotoLogin)];
     self.loginButton.backgroundColor=FSThemeColor;
     [self.view addSubview:self.loginButton];
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -123,7 +122,7 @@ extern BOOL islogin;
     [self presentViewController:registerVC animated:YES completion:nil];
 }
 #pragma mark - 登录
--(void)login{
+-(void)gotoLogin{
 //    NSLog(@"登陆");
     NSString *passStr=self.passwordText.text;
     NSString *accountStr=self.accountText.text;
@@ -240,12 +239,20 @@ extern BOOL islogin;
     }
     
 }
+//处理回车事件
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self gotoLogin];
+    return YES;
+}
 #pragma mark - 添加键盘通知
 -(void)addNoticeForKeyboard{
     //键盘出现的通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     //键盘消失的通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)keyboardWillShow:(NSNotification *)notification{
 //    NSLog(@"键盘弹出");
