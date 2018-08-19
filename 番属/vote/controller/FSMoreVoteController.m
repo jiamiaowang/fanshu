@@ -28,6 +28,7 @@ extern BOOL islogin;
 @property(nonatomic,strong)UISearchController *searchController;
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *voteArray;
+@property(nonatomic,strong)NSMutableArray *resultArray;
 @end
 
 @implementation FSMoreVoteController
@@ -36,6 +37,8 @@ extern BOOL islogin;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view .backgroundColor=FSBackgroundColor;
+    //	设置definesPresentationContext为YES，可以保证在UISearchController在激活状态下用户push到下一个view controller之后search bar不会仍留在界面上
+    self.definesPresentationContext = YES;
     [self initInterface];
     
     [self createSearchController];
@@ -74,11 +77,27 @@ extern BOOL islogin;
     //显示搜索结果时是否添加半透明覆盖层   默认YES
     self.searchController.dimsBackgroundDuringPresentation=NO;
     //搜索的时候是否隐藏导航栏   默认YES
-    self.searchController.hidesNavigationBarDuringPresentation=NO;
+//    self.searchController.hidesNavigationBarDuringPresentation=NO;
+    
+    self.searchController.searchBar.tintColor=FSThemeColor;
+    //去掉searchBar的边框
+    [[[[self.searchController.searchBar.subviews objectAtIndex:0] subviews] objectAtIndex:0] removeFromSuperview];
+    [self.searchController.searchBar setBackgroundColor:[UIColor clearColor]];
+    
     //设置为tableView的头部
     self.tableView.tableHeaderView=self.searchController.searchBar;
     
 }
+//解决搜索出结果后，tableView会向上偏移20px的问题
+-(void)viewDidLayoutSubviews {
+    if(self.searchController.active) {
+        [self.tableView setFrame:CGRectMake(0, 20, ScreenWidth, self.view.frame.size.height -20)];
+    }else {
+        self.tableView.frame =self.view.bounds;
+    }
+}
+
+
 //
 -(void)publishVote{
     //未登录
@@ -102,15 +121,17 @@ extern BOOL islogin;
 -(void)updateSearchResultsForSearchController:(UISearchController *)searchController{
     //取出搜索框里面的内容
     NSString *text=searchController.searchBar.text;
-    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"self contain %@",text];
-//    NSArray *array=[self.voteArray[1] searchWithText:];
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"title contains %@",text];
+    NSArray *array=[self.voteArray filteredArrayUsingPredicate:predicate];
+    self.resultArray=[[NSMutableArray alloc]initWithArray:array];
+    [self.tableView reloadData];
     
 }
 
 #pragma mark - 懒加载
 -(UITableView *)tableView{
     if(_tableView==nil){
-        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(10, 0, ScreenWidth-20, CGRectGetHeight(self.view.bounds)) style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate=self;
         _tableView.dataSource=self;
         _tableView.backgroundColor=FSBackgroundColor;
@@ -126,11 +147,20 @@ extern BOOL islogin;
 
 #pragma mark - table view data soure
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(self.searchController.isActive){
+        return self.resultArray.count;
+    }
     return self.voteArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FSVoteViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"moreVote" forIndexPath:indexPath];
-    FSVote *vote=self.voteArray[indexPath.row];
+    FSVote *vote;
+    if(self.searchController.isActive){
+        vote=self.resultArray[indexPath.row];
+    }
+    else{
+        vote=self.voteArray[indexPath.row];
+    }
     cell.title=vote.title;
     return cell;
 }
@@ -141,7 +171,13 @@ extern BOOL islogin;
         [self presentViewController:loginVC animated:YES completion:nil];
         return;
     }
-    FSVote *vote=self.voteArray[indexPath.row];
+    FSVote *vote;
+    if(self.searchController.isActive){
+        vote=self.resultArray[indexPath.row];
+    }
+    else{
+        vote=self.voteArray[indexPath.row];
+    }
     [self isVoted:vote];
 }
 //根据请求结果决定该跳转的界面

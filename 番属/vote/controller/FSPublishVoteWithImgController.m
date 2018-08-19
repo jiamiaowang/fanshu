@@ -52,7 +52,6 @@
 //    self.automaticallyAdjustsScrollViewInsets=NO;
 }
 -(void)dealloc{
-    NSLog(@"aa");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 }
@@ -255,8 +254,6 @@
 #pragma mark - 网络上传
 -(void)canUpload{
     if(!self.voteTitle.length){
-        NSLog(@"%@",self.parentViewController.view);
-        NSLog(@"%@",self.view);
         [UILabel showTip:@"投票的标题不能为空" toView:self.parentViewController.view centerYOffset:-64];
         
         return;
@@ -302,6 +299,7 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
+        [self.parentViewController.navigationController popViewControllerAnimated:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];

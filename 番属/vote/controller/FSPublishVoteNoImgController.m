@@ -46,7 +46,6 @@
 
 }
 -(void)dealloc{
-    NSLog(@"bb");
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 //
@@ -212,8 +211,9 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);
+        [self .parentViewController.navigationController popViewControllerAnimated:YES];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [UILabel showTip:@"" toView:self.parentViewController.view centerYOffset:-64];
+        [UILabel showTip:@"请检查网络" toView:self.parentViewController.view centerYOffset:-64];
         NSLog(@"%@",error);
     }];
 }

@@ -291,9 +291,9 @@
 		D039756E21199B93008222E5 /* article */ = {
 			isa = PBXGroup;
 			children = (
-				D039757121199BB7008222E5 /* model */,
-				D039757021199BB2008222E5 /* view */,
 				D039756F21199BAC008222E5 /* controller */,
+				D039757021199BB2008222E5 /* view */,
+				D039757121199BB7008222E5 /* model */,
 			);
 			name = article;
 			sourceTree = "<group>";
