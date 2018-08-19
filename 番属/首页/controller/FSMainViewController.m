@@ -163,12 +163,13 @@ extern BOOL islogin;
     if(section<2){
         return 40;
     }
-    return 15;
+    return 0.0000001;
     
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-    FSSectionHeader *sectionHeader=[[FSSectionHeader alloc]initWithFrame:CGRectMake(0, 40, ScreenWidth, 40)];
+    FSSectionHeader *sectionHeader=[[FSSectionHeader alloc]init];
     if(section==0){
         sectionHeader.title=@"投票";
         sectionHeader.moreBlock=^{
@@ -191,7 +192,7 @@ extern BOOL islogin;
 
 {
     CGFloat sectionHeaderHeight;
-    sectionHeaderHeight = 20;
+    sectionHeaderHeight = 40;
     if (scrollView == self.tableView) {
         //去掉UItableview的section的headerview黏性
         if (scrollView.contentOffset.y<=sectionHeaderHeight && scrollView.contentOffset.y>=0) {
@@ -271,7 +272,7 @@ extern BOOL islogin;
         [self whichVC:isvoted vote:vote];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+//        NSLog(@"%@",error);
     }];
 }
 

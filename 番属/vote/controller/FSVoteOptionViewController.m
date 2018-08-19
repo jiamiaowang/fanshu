@@ -18,6 +18,9 @@
 //跳转界面
 #import "FSVotePollController.h"
 
+
+#import "UILabel+Extension.h"
+
 #import "FSNetworkingTool.h"
 //
 @interface FSVoteOptionViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -210,30 +213,22 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"fail");
-        NSLog(@"%@",error);
+//        NSLog(@"%@",error);
     }];
 }
 #pragma mark - block回调
 -(void)voteButtonClick{
     NSIndexPath *selectedIndexPath=[[self.collectionView indexPathsForSelectedItems]firstObject];
     if(selectedIndexPath==nil){
-        [self showAlertController];
+        [UILabel showTip:@"请选择一个选项" toView:self.view centerYOffset:0];
+
         return ;
     }
     FSVoteOptions *option=self.voteOptionArray[selectedIndexPath.item];
 //    NSLog(@"%d",option.option_id);
     [self votePoll:option.option_id];
 }
-//
--(void)showAlertController{
-    
-    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"" message:@"请选择一个投票" preferredStyle:UIAlertControllerStyleAlert];
-    [self presentViewController:alertController animated:YES completion:nil];
-    
-    [alertController performSelector:@selector(dismissViewControllerAnimated:completion:) withObject:nil afterDelay:1.0];
-    
-    
-}
+
 
 
 

@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FSTabBarViewController.h"
-#import <AFNetworking.h>
-
+#import "FSNetworkingTool.h"
 #import "FSLoginViewController.h"
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -29,7 +28,7 @@ BOOL islogin;  //用户是否登陆
     return YES;
 }
 -(void)checkLogin{
-    [[AFHTTPSessionManager manager]GET:@"http://127.0.0.1/fanshu/checkLogin.php" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[FSNetworkingTool shareNetworkingTool]GET:@"logined.php" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         islogin=[responseObject[@"login"] intValue];
 //        NSLog(@"%d",islogin);

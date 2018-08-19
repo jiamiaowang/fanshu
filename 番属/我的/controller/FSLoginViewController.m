@@ -11,7 +11,7 @@
 
 #import "FSMineViewController.h"
 #import "UIButton+Extension.h"
-#import "UIAlertController+Extension.h"
+#import "UILabel+Extension.h"
 //跳转界面
 #import "FSRegisterViewController.h"
 //
@@ -64,7 +64,7 @@ extern BOOL islogin;
     
     
     //账号
-    self.accountText=[FSUnderlineTextField createTextField:@"手机／邮箱"];
+    self.accountText=[FSUnderlineTextField underlineTextField:@"手机／邮箱" fontSize:15];
     [self.view addSubview:self.accountText];
     
     [self.accountText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,7 +77,7 @@ extern BOOL islogin;
     self.accountText.keyboardType=UIKeyboardTypeNumberPad;
     self.accountText.delegate=self;
     //密码
-    self.passwordText=[FSUnderlineTextField createTextField:@"密码"];
+    self.passwordText=[FSUnderlineTextField underlineTextField:@"密码" fontSize:15];
     [self.view addSubview:self.passwordText];
     
     [self.passwordText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -129,14 +129,12 @@ extern BOOL islogin;
 //    NSLog(@"%@",accountStr);
     if([accountStr isEqualToString:@""]){
 //        NSLog(@"用户名为空");
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"用户名不能为空" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"用户名不能为空" toView:self.view centerYOffset:0];
         return;
     }
     if([passStr isEqualToString:@""]){
 //        NSLog(@"密码为空");
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"密码不能为空" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"密码不能为空" toView:self.view centerYOffset:0];
         return;
     }
     
@@ -156,9 +154,9 @@ extern BOOL islogin;
 //        NSLog(@"%@",time);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求时间失败");
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"请检查网络" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
-        NSLog(@"%@",error);
+        [UILabel showTip:@"请检查网络" toView:self.view centerYOffset:0];
+
+//        NSLog(@"%@",error);
         return ;
     }];
 
@@ -191,7 +189,7 @@ extern BOOL islogin;
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
-        NSLog(@"%@",error);
+//        NSLog(@"%@",error);
         return ;
     }];
 }
@@ -201,8 +199,7 @@ extern BOOL islogin;
         [self logined];
     }
     else{
-        UIAlertController *alertController=[UIAlertController alertController:nil message:@"用户名或密码错误" actionTitle:@"确定"];
-        [self presentViewController:alertController animated:YES completion:nil];
+        [UILabel showTip:@"用户名或密码错误" toView:self.view centerYOffset:0];
         
     }
 }
@@ -252,6 +249,7 @@ extern BOOL islogin;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 - (void)dealloc {
+    NSLog(@"bb");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)keyboardWillShow:(NSNotification *)notification{

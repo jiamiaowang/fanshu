@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FSUnderlineTextField : UITextField
-+(FSUnderlineTextField *)createTextField:(NSString *)placeholder;
++(FSUnderlineTextField *)underlineTextField:(NSString *)placeholder fontSize:(CGFloat)fontSize;
 @end

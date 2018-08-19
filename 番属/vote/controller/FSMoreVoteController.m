@@ -16,13 +16,16 @@
 //跳转界面
 #import "FSVoteOptionViewController.h"
 #import "FSVotePollController.h"
-#import "FSPublishVoteViewController.h"
+#import "FSPublishVoteController.h"
+#import "FSLoginViewController.h"
 
 #import "FSNetworkingTool.h"
 //第三方
 #import <MJRefresh.h>
 #import <MJExtension.h>
-@interface FSMoreVoteController ()<UITableViewDelegate,UITableViewDataSource>
+extern BOOL islogin;
+@interface FSMoreVoteController ()<UITableViewDelegate,UITableViewDataSource,UISearchResultsUpdating>
+@property(nonatomic,strong)UISearchController *searchController;
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *voteArray;
 @end
@@ -35,6 +38,7 @@
     self.view .backgroundColor=FSBackgroundColor;
     [self initInterface];
     
+    [self createSearchController];
     [self setupRefrensh];
     
     [self loadNewData];
@@ -42,6 +46,7 @@
     self.automaticallyAdjustsScrollViewInsets=NO;
     
 }
+
 //初始化界面
 -(void)initInterface{
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -60,9 +65,30 @@
 -(void)back{
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(void)createSearchController{
+     //创建搜索控制器。参数写nil代表使用当前控制器的view来显示搜索结果
+    self.searchController=[[UISearchController alloc]initWithSearchResultsController:nil];
+    
+    //设置搜索结果更新代理，实现协议中方法，更新搜索结果
+    self.searchController.searchResultsUpdater=self;
+    //显示搜索结果时是否添加半透明覆盖层   默认YES
+    self.searchController.dimsBackgroundDuringPresentation=NO;
+    //搜索的时候是否隐藏导航栏   默认YES
+    self.searchController.hidesNavigationBarDuringPresentation=NO;
+    //设置为tableView的头部
+    self.tableView.tableHeaderView=self.searchController.searchBar;
+    
+}
+//
 -(void)publishVote{
+    //未登录
+    if(!islogin){
+        FSLoginViewController *loginVC=[[FSLoginViewController alloc]init];
+        [self presentViewController:loginVC animated:YES completion:nil];
+        return;
+    }
     self.hidesBottomBarWhenPushed=YES;
-    FSPublishVoteViewController *publishVC=[[FSPublishVoteViewController alloc]init];
+    FSPublishVoteController *publishVC=[[FSPublishVoteController alloc]init];
     [self.navigationController pushViewController:publishVC animated:YES];
 }
 //设置刷新
@@ -72,6 +98,15 @@
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
                                                                     refreshingAction:@selector(loadMoreData)];
 }
+#pragma mark - 搜索更新
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+    //取出搜索框里面的内容
+    NSString *text=searchController.searchBar.text;
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"self contain %@",text];
+//    NSArray *array=[self.voteArray[1] searchWithText:];
+    
+}
+
 #pragma mark - 懒加载
 -(UITableView *)tableView{
     if(_tableView==nil){
@@ -100,6 +135,12 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //未登录
+    if(!islogin){
+        FSLoginViewController *loginVC=[[FSLoginViewController alloc]init];
+        [self presentViewController:loginVC animated:YES completion:nil];
+        return;
+    }
     FSVote *vote=self.voteArray[indexPath.row];
     [self isVoted:vote];
 }
@@ -125,7 +166,7 @@
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+//        NSLog(@"%@",error);
         [self.tableView.mj_header endRefreshing];
 
     }];
@@ -142,7 +183,7 @@
         [self whichVC:isvoted vote:vote];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+//        NSLog(@"%@",error);
     }];
 }
 @end

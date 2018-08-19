@@ -17,9 +17,19 @@
 		D004367620F8B10200AA1360 /* FSSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D004367520F8B10200AA1360 /* FSSectionHeader.m */; };
 		D004367920F8B1F500AA1360 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D004367820F8B1F500AA1360 /* UIButton+Extension.m */; };
 		D004367C20F8D50C00AA1360 /* FSVoteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D004367B20F8D50C00AA1360 /* FSVoteViewCell.m */; };
+		D00B8118212730CD00BD89A8 /* FSPublishVoteNoImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B8117212730CD00BD89A8 /* FSPublishVoteNoImgCell.m */; };
 		D00D84952122A3AB0067F9A2 /* FSRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D84942122A3AB0067F9A2 /* FSRegisterViewController.m */; };
-		D00D849821232DDD0067F9A2 /* FSPublishVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D849721232DDD0067F9A2 /* FSPublishVoteViewController.m */; };
+		D00D849821232DDD0067F9A2 /* FSPublishVoteWithImgController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D849721232DDD0067F9A2 /* FSPublishVoteWithImgController.m */; };
 		D01037C720FDA6D20027B48A /* FSVoteOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01037C620FDA6D20027B48A /* FSVoteOptionViewController.m */; };
+		D013BD072123E48500B3BD64 /* FSPublishVoteTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = D013BD062123E48500B3BD64 /* FSPublishVoteTitle.m */; };
+		D013BD0A21240DD800B3BD64 /* FSPublishVoteWithImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D013BD0921240DD800B3BD64 /* FSPublishVoteWithImgCell.m */; };
+		D013BD132124338D00B3BD64 /* FSPublishVoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = D013BD122124338D00B3BD64 /* FSPublishVoteController.m */; };
+		D013BD1C21244BCF00B3BD64 /* FSPublishVoteNoImgController.m in Sources */ = {isa = PBXBuildFile; fileRef = D013BD1B21244BCF00B3BD64 /* FSPublishVoteNoImgController.m */; };
+		D013BD1F21244C8D00B3BD64 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D013BD1E21244C8D00B3BD64 /* UIView+ViewController.m */; };
+		D01A11BA21255A32000557A7 /* FSPublishVoteFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11B921255A32000557A7 /* FSPublishVoteFooter.m */; };
+		D01A11BE21256566000557A7 /* FSPublishFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11BD21256566000557A7 /* FSPublishFooter.m */; };
+		D01A11C1212586AD000557A7 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11C0212586AD000557A7 /* UILabel+Extension.m */; };
+		D01A11C42125B6DA000557A7 /* FSPublishOption.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11C32125B6DA000557A7 /* FSPublishOption.m */; };
 		D033D0E720F38A6200B31A64 /* FSArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = D033D0E620F38A6200B31A64 /* FSArticle.m */; };
 		D033D0F020F39DB000B31A64 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D033D0EC20F39DB000B31A64 /* 1.jpeg */; };
 		D033D0F120F39DB000B31A64 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D033D0ED20F39DB000B31A64 /* 2.jpeg */; };
@@ -32,7 +42,6 @@
 		D03AFED620F356BF00639F44 /* FSImageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AFED520F356BF00639F44 /* FSImageHeader.m */; };
 		D0444D082120406000A8AC44 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = D0444D072120406000A8AC44 /* NSString+Hash.m */; };
 		D0444D0C2120414A00A8AC44 /* FSNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D0444D0B2120414A00A8AC44 /* FSNetworkingTool.m */; };
-		D0444D0F21208FBA00A8AC44 /* UIAlertController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D0444D0E21208FBA00A8AC44 /* UIAlertController+Extension.m */; };
 		D04A036220FF03D8007F11DD /* FSVoteOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036020FF03D8007F11DD /* FSVoteOptionCell.m */; };
 		D04A036320FF03D8007F11DD /* FSVoteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A036120FF03D8007F11DD /* FSVoteOptionCell.xib */; };
 		D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036620FF1658007F11DD /* FSVoteOptionHeader.m */; };
@@ -73,12 +82,32 @@
 		D004367820F8B1F500AA1360 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Extension.m"; path = "other/category/UIButton+Extension.m"; sourceTree = "<group>"; };
 		D004367A20F8D50C00AA1360 /* FSVoteViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteViewCell.h; path = "首页/view/FSVoteViewCell.h"; sourceTree = "<group>"; };
 		D004367B20F8D50C00AA1360 /* FSVoteViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteViewCell.m; path = "首页/view/FSVoteViewCell.m"; sourceTree = "<group>"; };
+		D00B8116212730CD00BD89A8 /* FSPublishVoteNoImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteNoImgCell.h; path = vote/view/publishVote/FSPublishVoteNoImgCell.h; sourceTree = "<group>"; };
+		D00B8117212730CD00BD89A8 /* FSPublishVoteNoImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteNoImgCell.m; path = vote/view/publishVote/FSPublishVoteNoImgCell.m; sourceTree = "<group>"; };
 		D00D84932122A3AB0067F9A2 /* FSRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSRegisterViewController.h; path = "我的/controller/FSRegisterViewController.h"; sourceTree = "<group>"; };
 		D00D84942122A3AB0067F9A2 /* FSRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSRegisterViewController.m; path = "我的/controller/FSRegisterViewController.m"; sourceTree = "<group>"; };
-		D00D849621232DDD0067F9A2 /* FSPublishVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteViewController.h; path = vote/controller/FSPublishVoteViewController.h; sourceTree = "<group>"; };
-		D00D849721232DDD0067F9A2 /* FSPublishVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteViewController.m; path = vote/controller/FSPublishVoteViewController.m; sourceTree = "<group>"; };
+		D00D849621232DDD0067F9A2 /* FSPublishVoteWithImgController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteWithImgController.h; path = vote/controller/FSPublishVoteWithImgController.h; sourceTree = "<group>"; };
+		D00D849721232DDD0067F9A2 /* FSPublishVoteWithImgController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteWithImgController.m; path = vote/controller/FSPublishVoteWithImgController.m; sourceTree = "<group>"; };
 		D01037C520FDA6D20027B48A /* FSVoteOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionViewController.h; path = vote/controller/FSVoteOptionViewController.h; sourceTree = "<group>"; };
 		D01037C620FDA6D20027B48A /* FSVoteOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionViewController.m; path = vote/controller/FSVoteOptionViewController.m; sourceTree = "<group>"; };
+		D013BD052123E48500B3BD64 /* FSPublishVoteTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteTitle.h; path = vote/view/publishVote/FSPublishVoteTitle.h; sourceTree = "<group>"; };
+		D013BD062123E48500B3BD64 /* FSPublishVoteTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteTitle.m; path = vote/view/publishVote/FSPublishVoteTitle.m; sourceTree = "<group>"; };
+		D013BD0821240DD800B3BD64 /* FSPublishVoteWithImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteWithImgCell.h; path = vote/view/publishVote/FSPublishVoteWithImgCell.h; sourceTree = "<group>"; };
+		D013BD0921240DD800B3BD64 /* FSPublishVoteWithImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteWithImgCell.m; path = vote/view/publishVote/FSPublishVoteWithImgCell.m; sourceTree = "<group>"; };
+		D013BD112124338D00B3BD64 /* FSPublishVoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteController.h; path = vote/controller/FSPublishVoteController.h; sourceTree = "<group>"; };
+		D013BD122124338D00B3BD64 /* FSPublishVoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteController.m; path = vote/controller/FSPublishVoteController.m; sourceTree = "<group>"; };
+		D013BD1A21244BCF00B3BD64 /* FSPublishVoteNoImgController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteNoImgController.h; path = vote/controller/FSPublishVoteNoImgController.h; sourceTree = "<group>"; };
+		D013BD1B21244BCF00B3BD64 /* FSPublishVoteNoImgController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteNoImgController.m; path = vote/controller/FSPublishVoteNoImgController.m; sourceTree = "<group>"; };
+		D013BD1D21244C8D00B3BD64 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+ViewController.h"; path = "other/category/UIView+ViewController.h"; sourceTree = "<group>"; };
+		D013BD1E21244C8D00B3BD64 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+ViewController.m"; path = "other/category/UIView+ViewController.m"; sourceTree = "<group>"; };
+		D01A11B821255A32000557A7 /* FSPublishVoteFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteFooter.h; path = vote/view/publishVote/FSPublishVoteFooter.h; sourceTree = "<group>"; };
+		D01A11B921255A32000557A7 /* FSPublishVoteFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteFooter.m; path = vote/view/publishVote/FSPublishVoteFooter.m; sourceTree = "<group>"; };
+		D01A11BC21256566000557A7 /* FSPublishFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishFooter.h; path = vote/view/publishVote/FSPublishFooter.h; sourceTree = "<group>"; };
+		D01A11BD21256566000557A7 /* FSPublishFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishFooter.m; path = vote/view/publishVote/FSPublishFooter.m; sourceTree = "<group>"; };
+		D01A11BF212586AD000557A7 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Extension.h"; path = "other/category/UILabel+Extension.h"; sourceTree = "<group>"; };
+		D01A11C0212586AD000557A7 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Extension.m"; path = "other/category/UILabel+Extension.m"; sourceTree = "<group>"; };
+		D01A11C22125B6DA000557A7 /* FSPublishOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishOption.h; path = vote/model/FSPublishOption.h; sourceTree = "<group>"; };
+		D01A11C32125B6DA000557A7 /* FSPublishOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishOption.m; path = vote/model/FSPublishOption.m; sourceTree = "<group>"; };
 		D033D0E520F38A6200B31A64 /* FSArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticle.h; path = article/model/FSArticle.h; sourceTree = "<group>"; };
 		D033D0E620F38A6200B31A64 /* FSArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticle.m; path = article/model/FSArticle.m; sourceTree = "<group>"; };
 		D033D0EC20F39DB000B31A64 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
@@ -99,8 +128,6 @@
 		D0444D072120406000A8AC44 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		D0444D0A2120414A00A8AC44 /* FSNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSNetworkingTool.h; path = other/tool/FSNetworkingTool.h; sourceTree = "<group>"; };
 		D0444D0B2120414A00A8AC44 /* FSNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSNetworkingTool.m; path = other/tool/FSNetworkingTool.m; sourceTree = "<group>"; };
-		D0444D0D21208FB900A8AC44 /* UIAlertController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+Extension.h"; path = "other/category/UIAlertController+Extension.h"; sourceTree = "<group>"; };
-		D0444D0E21208FBA00A8AC44 /* UIAlertController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+Extension.m"; path = "other/category/UIAlertController+Extension.m"; sourceTree = "<group>"; };
 		D04A035F20FF03D8007F11DD /* FSVoteOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionCell.h; path = vote/view/voteOption/FSVoteOptionCell.h; sourceTree = "<group>"; };
 		D04A036020FF03D8007F11DD /* FSVoteOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionCell.m; path = vote/view/voteOption/FSVoteOptionCell.m; sourceTree = "<group>"; };
 		D04A036120FF03D8007F11DD /* FSVoteOptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FSVoteOptionCell.xib; path = vote/view/voteOption/FSVoteOptionCell.xib; sourceTree = "<group>"; };
@@ -110,8 +137,8 @@
 		D04A036920FF1FA4007F11DD /* FSVoteOptionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionFooter.m; path = vote/view/voteOption/FSVoteOptionFooter.m; sourceTree = "<group>"; };
 		D071B3E5211C0CE4004A8A4E /* FSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSLoginViewController.h; path = "我的/controller/FSLoginViewController.h"; sourceTree = "<group>"; };
 		D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSLoginViewController.m; path = "我的/controller/FSLoginViewController.m"; sourceTree = "<group>"; };
-		D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUnderlineTextField.h; path = "我的/view/FSUnderlineTextField.h"; sourceTree = "<group>"; };
-		D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSUnderlineTextField.m; path = "我的/view/FSUnderlineTextField.m"; sourceTree = "<group>"; };
+		D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUnderlineTextField.h; path = other/view/FSUnderlineTextField.h; sourceTree = "<group>"; };
+		D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSUnderlineTextField.m; path = other/view/FSUnderlineTextField.m; sourceTree = "<group>"; };
 		D0781414211AD42800579643 /* FSVotePollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVotePollCell.h; path = vote/view/FSVotePollCell.h; sourceTree = "<group>"; };
 		D0781415211AD42800579643 /* FSVotePollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVotePollCell.m; path = vote/view/FSVotePollCell.m; sourceTree = "<group>"; };
 		D0781419211B07FE00579643 /* FSMoreVoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMoreVoteController.h; path = vote/controller/FSMoreVoteController.h; sourceTree = "<group>"; };
@@ -164,6 +191,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D013BD042123E42A00B3BD64 /* publishVote */ = {
+			isa = PBXGroup;
+			children = (
+				D013BD052123E48500B3BD64 /* FSPublishVoteTitle.h */,
+				D013BD062123E48500B3BD64 /* FSPublishVoteTitle.m */,
+				D013BD0821240DD800B3BD64 /* FSPublishVoteWithImgCell.h */,
+				D013BD0921240DD800B3BD64 /* FSPublishVoteWithImgCell.m */,
+				D00B8116212730CD00BD89A8 /* FSPublishVoteNoImgCell.h */,
+				D00B8117212730CD00BD89A8 /* FSPublishVoteNoImgCell.m */,
+				D01A11B821255A32000557A7 /* FSPublishVoteFooter.h */,
+				D01A11B921255A32000557A7 /* FSPublishVoteFooter.m */,
+				D01A11BC21256566000557A7 /* FSPublishFooter.h */,
+				D01A11BD21256566000557A7 /* FSPublishFooter.m */,
+			);
+			name = publishVote;
+			sourceTree = "<group>";
+		};
+		D01A11B721254C92000557A7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */,
+				D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		D033D0EB20F39DB000B31A64 /* imageLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,8 +231,6 @@
 		D03975452119872E008222E5 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */,
-				D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -203,8 +254,12 @@
 				D03975732119C794008222E5 /* FSVotePollController.m */,
 				D0781419211B07FE00579643 /* FSMoreVoteController.h */,
 				D078141A211B07FE00579643 /* FSMoreVoteController.m */,
-				D00D849621232DDD0067F9A2 /* FSPublishVoteViewController.h */,
-				D00D849721232DDD0067F9A2 /* FSPublishVoteViewController.m */,
+				D013BD112124338D00B3BD64 /* FSPublishVoteController.h */,
+				D013BD122124338D00B3BD64 /* FSPublishVoteController.m */,
+				D00D849621232DDD0067F9A2 /* FSPublishVoteWithImgController.h */,
+				D00D849721232DDD0067F9A2 /* FSPublishVoteWithImgController.m */,
+				D013BD1A21244BCF00B3BD64 /* FSPublishVoteNoImgController.h */,
+				D013BD1B21244BCF00B3BD64 /* FSPublishVoteNoImgController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -212,6 +267,7 @@
 		D039756C21199B2F008222E5 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D013BD042123E42A00B3BD64 /* publishVote */,
 				D04A036420FF15BE007F11DD /* voteOption */,
 				D0781414211AD42800579643 /* FSVotePollCell.h */,
 				D0781415211AD42800579643 /* FSVotePollCell.m */,
@@ -226,6 +282,8 @@
 				D004366420F88A9800AA1360 /* FSVote.m */,
 				D004366620F88AF900AA1360 /* FSVoteOptions.h */,
 				D004366720F88AF900AA1360 /* FSVoteOptions.m */,
+				D01A11C22125B6DA000557A7 /* FSPublishOption.h */,
+				D01A11C32125B6DA000557A7 /* FSPublishOption.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -313,8 +371,10 @@
 				D03AFED120F350A400639F44 /* UIBarButtonItem+Extension.m */,
 				D004367720F8B1F500AA1360 /* UIButton+Extension.h */,
 				D004367820F8B1F500AA1360 /* UIButton+Extension.m */,
-				D0444D0D21208FB900A8AC44 /* UIAlertController+Extension.h */,
-				D0444D0E21208FBA00A8AC44 /* UIAlertController+Extension.m */,
+				D013BD1D21244C8D00B3BD64 /* UIView+ViewController.h */,
+				D013BD1E21244C8D00B3BD64 /* UIView+ViewController.m */,
+				D01A11BF212586AD000557A7 /* UILabel+Extension.h */,
+				D01A11C0212586AD000557A7 /* UILabel+Extension.m */,
 			);
 			name = category;
 			sourceTree = "<group>";
@@ -414,6 +474,7 @@
 		D0E924D720F217BF00BA26CF /* other */ = {
 			isa = PBXGroup;
 			children = (
+				D01A11B721254C92000557A7 /* view */,
 				D0444D092120413B00A8AC44 /* tool */,
 				D03AFECF20F3500800639F44 /* category */,
 				D0E924D820F217CE00BA26CF /* controller */,
@@ -617,15 +678,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E924C320F1F3BA00BA26CF /* ViewController.m in Sources */,
+				D01A11C42125B6DA000557A7 /* FSPublishOption.m in Sources */,
 				D03AFECE20F34C9E00639F44 /* FSSearchViewController.m in Sources */,
 				D0E924E120F2192900BA26CF /* FSTabBarViewController.m in Sources */,
 				D004367620F8B10200AA1360 /* FSSectionHeader.m in Sources */,
 				D004367920F8B1F500AA1360 /* UIButton+Extension.m in Sources */,
+				D013BD072123E48500B3BD64 /* FSPublishVoteTitle.m in Sources */,
+				D013BD0A21240DD800B3BD64 /* FSPublishVoteWithImgCell.m in Sources */,
 				D04A036220FF03D8007F11DD /* FSVoteOptionCell.m in Sources */,
 				D01037C720FDA6D20027B48A /* FSVoteOptionViewController.m in Sources */,
+				D013BD1C21244BCF00B3BD64 /* FSPublishVoteNoImgController.m in Sources */,
 				D004366F20F895EB00AA1360 /* FSAtricleViewCell.m in Sources */,
 				D0E924C020F1F3BA00BA26CF /* AppDelegate.m in Sources */,
 				D0444D0C2120414A00A8AC44 /* FSNetworkingTool.m in Sources */,
+				D01A11C1212586AD000557A7 /* UILabel+Extension.m in Sources */,
+				D013BD1F21244C8D00B3BD64 /* UIView+ViewController.m in Sources */,
 				D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */,
 				D0038F732118798600992E89 /* FSVoteOptionNoImgCell.m in Sources */,
 				D0E924ED20F2202F00BA26CF /* FSMineViewController.m in Sources */,
@@ -636,8 +703,10 @@
 				D033D0E720F38A6200B31A64 /* FSArticle.m in Sources */,
 				D00D84952122A3AB0067F9A2 /* FSRegisterViewController.m in Sources */,
 				D04A036A20FF1FA4007F11DD /* FSVoteOptionFooter.m in Sources */,
+				D00B8118212730CD00BD89A8 /* FSPublishVoteNoImgCell.m in Sources */,
 				D03AFED220F350A400639F44 /* UIBarButtonItem+Extension.m in Sources */,
-				D00D849821232DDD0067F9A2 /* FSPublishVoteViewController.m in Sources */,
+				D01A11BA21255A32000557A7 /* FSPublishVoteFooter.m in Sources */,
+				D00D849821232DDD0067F9A2 /* FSPublishVoteWithImgController.m in Sources */,
 				D0E924BD20F1F3BA00BA26CF /* main.m in Sources */,
 				D0444D082120406000A8AC44 /* NSString+Hash.m in Sources */,
 				D0E924E820F21A9500BA26CF /* FSMainViewController.m in Sources */,
@@ -645,10 +714,11 @@
 				D03975742119C794008222E5 /* FSVotePollController.m in Sources */,
 				D004367C20F8D50C00AA1360 /* FSVoteViewCell.m in Sources */,
 				D004366520F88A9800AA1360 /* FSVote.m in Sources */,
-				D0444D0F21208FBA00A8AC44 /* UIAlertController+Extension.m in Sources */,
 				D03AFED620F356BF00639F44 /* FSImageHeader.m in Sources */,
 				D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */,
+				D013BD132124338D00B3BD64 /* FSPublishVoteController.m in Sources */,
 				D071B3E8211C0CE4004A8A4E /* FSLoginViewController.m in Sources */,
+				D01A11BE21256566000557A7 /* FSPublishFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +840,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25A9SK8Z73;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/番属/other/PrefixHeader.pch";
 				INFOPLIST_FILE = "番属/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -784,6 +855,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 25A9SK8Z73;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/番属/other/PrefixHeader.pch";
 				INFOPLIST_FILE = "番属/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

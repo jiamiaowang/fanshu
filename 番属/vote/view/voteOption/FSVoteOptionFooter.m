@@ -31,6 +31,8 @@
     return self;
 }
 -(void)vote{
-    !self.votebuttonBlock ? : self.votebuttonBlock();
+    if(self.votebuttonBlock){
+        self.votebuttonBlock();
+    }
 }
 @end

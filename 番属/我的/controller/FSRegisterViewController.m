@@ -9,7 +9,7 @@
 #import "FSRegisterViewController.h"
 #import "FSUnderlineTextField.h"
 #import "UIButton+Extension.h"
-#import "UIAlertController+Extension.h"
+#import "UILabel+Extension.h"
 
 #import <Masonry.h>
 #import "FSNetworkingTool.h"
@@ -58,7 +58,7 @@ extern BOOL islogin;
     
     
     //账号
-    self.accountText=[FSUnderlineTextField createTextField:@"请输入您的手机"];
+    self.accountText=[FSUnderlineTextField underlineTextField:@"请输入您的手机" fontSize:15];
     [self.view addSubview:self.accountText];
     
     [self.accountText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -72,7 +72,7 @@ extern BOOL islogin;
     self.accountText.delegate=self;
     
     //昵称
-    self.usernameText=[FSUnderlineTextField createTextField:@"请输入您的昵称"];
+    self.usernameText=[FSUnderlineTextField underlineTextField:@"请输入您的昵称" fontSize:15];
     [self.view addSubview:self.usernameText];
     
     [self.usernameText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -84,7 +84,7 @@ extern BOOL islogin;
     self.usernameText.delegate=self;
     
     //密码
-    self.passwordText=[FSUnderlineTextField createTextField:@"请输入您的密码"];
+    self.passwordText=[FSUnderlineTextField underlineTextField:@"请输入您的密码" fontSize:15];
     [self.view addSubview:self.passwordText];
     
     [self.passwordText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -139,19 +139,18 @@ extern BOOL islogin;
 //    NSLog(@"%@",accountStr);
     if([accountStr isEqualToString:@""]){
         //        NSLog(@"用户名为空");
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"账号不能为空" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"账号不能为空" toView:self.view centerYOffset:0];
+
         return;
     }
     if([usernameStr isEqualToString:@""]){
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"昵称不能为空" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"昵称不能为空" toView:self.view centerYOffset:0] ;
+
         return;
     }
     if([passStr isEqualToString:@""]){
         //        NSLog(@"密码为空");
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"密码不能为空" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"密码不能为空" toView:self.view centerYOffset:0];
         return;
     }
     [self isPhone:accountStr];
@@ -162,8 +161,8 @@ extern BOOL islogin;
     NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBIL];
     if (![regextestmobile evaluateWithObject:accountStr]) {
 //        NSLog(@"手机号不对");
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"请输入正确的手机号" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"请输入正确的手机号" toView:self.view centerYOffset:0];
+
         return;
     }
     [self isRegister];
@@ -182,6 +181,7 @@ extern BOOL islogin;
         NSString *result=responseObject[@"isSuccess"];
         [self canRegister:result];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [UILabel showTip:@"请检查网络" toView:self.view centerYOffset:0];
         NSLog(@"%@",error);
     }];
     
@@ -193,8 +193,8 @@ extern BOOL islogin;
         return;
     }
     else if([result isEqualToString:@"already"]){
-        UIAlertController *alert=[UIAlertController alertController:nil message:@"该手机号已存在" actionTitle:@"确定"];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UILabel showTip:@"该手机号已被注册" toView:self.view centerYOffset:0];
+
         return;
     }
 }

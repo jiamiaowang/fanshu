@@ -13,14 +13,17 @@
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-+(FSUnderlineTextField *)createTextField:(NSString *)placeholder{
++(FSUnderlineTextField *)underlineTextField:(NSString *)placeholder fontSize:(CGFloat)fontSize{
     FSUnderlineTextField *textField=[[FSUnderlineTextField alloc]init];
-    textField.font=[UIFont systemFontOfSize:15];
+    textField.font=[UIFont systemFontOfSize:fontSize];
     textField.placeholder=placeholder;
     textField.autocorrectionType=UITextAutocorrectionTypeNo;
     textField.clearButtonMode=UITextFieldViewModeWhileEditing;
+    textField.tintColor=FSThemeColor;
+
     //首字母不大写
     textField.autocapitalizationType=UITextAutocapitalizationTypeNone;
+    
     return textField;
 }
 - (void)drawRect:(CGRect)rect {

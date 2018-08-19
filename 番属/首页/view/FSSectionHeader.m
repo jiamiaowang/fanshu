@@ -44,7 +44,9 @@
     
 }
 -(void)moreClick:(UIButton *)sender{
-    !self.moreBlock ? : self.moreBlock();
+    if(self.moreBlock){
+        self.moreBlock();
+    }
 }
 
 
