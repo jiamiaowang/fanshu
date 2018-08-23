@@ -249,7 +249,6 @@ extern BOOL islogin;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 - (void)dealloc {
-    NSLog(@"bb");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 -(void)keyboardWillShow:(NSNotification *)notification{

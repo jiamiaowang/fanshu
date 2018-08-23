@@ -29,6 +29,7 @@
 #import "FSLoginViewController.h"
 
 #import "FSMoreVoteController.h"
+#import "FSMoreArticleController.h"
 
 #import "FSNetworkingTool.h"
 //第三方
@@ -96,7 +97,6 @@ extern BOOL islogin;
 -(void)setupTableView{
     self.tableView=[[UITableView alloc]init];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-//    self.tableView.separatorStyle=UITableViewStylePlain;
     self.tableView.backgroundColor = FSBackgroundColor;
     [self.tableView registerClass:[FSVoteViewCell class]
            forCellReuseIdentifier:@"voteCell"];
@@ -112,6 +112,8 @@ extern BOOL islogin;
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(5, 10, 5, 10));
     }];
+    
+    
    
    
 }
@@ -157,13 +159,13 @@ extern BOOL islogin;
         return cell;
     }
 }
-#pragma mark -Table View delegate
+#pragma mark - Table View delegate
 //行头
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if(section<2){
         return 40;
     }
-    return 0.0000001;
+    return 10;
     
 }
 
@@ -182,6 +184,12 @@ extern BOOL islogin;
     }
     else if(section==1){
         sectionHeader.title=@"推荐文章";
+        sectionHeader.moreBlock=^{
+            self.hidesBottomBarWhenPushed=YES;
+            FSMoreArticleController *moreVC=[[FSMoreArticleController alloc]init];
+            [self.navigationController pushViewController:moreVC animated:YES];
+            self.hidesBottomBarWhenPushed=NO;
+        };
         return sectionHeader;
     }
     
@@ -215,18 +223,20 @@ extern BOOL islogin;
 }
 //
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSLog(@"%d",islogin);
-    //未登录
-    if(!islogin){
-        FSLoginViewController *loginVC=[[FSLoginViewController alloc]init];
-        [self presentViewController:loginVC animated:YES completion:nil];
-        return;
-    }
-    
     //调转投票选项
     if(indexPath.section==0){
+        //未登录
+        if(!islogin){
+            FSLoginViewController *loginVC=[[FSLoginViewController alloc]init];
+            [self presentViewController:loginVC animated:YES completion:nil];
+            return;
+        }
+        
         FSVote *vote=self.voteAndArticle.vote[indexPath.row];
         [self isVoted:vote];
+    }
+    else{
+        
     }
 }
 //根据请求结果决定该跳转的界面

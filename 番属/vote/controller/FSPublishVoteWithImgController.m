@@ -223,7 +223,7 @@
         //判断是否支持相机
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
             imagePicker.sourceType=UIImagePickerControllerSourceTypeCamera;
-//            [self.parentVC presentViewController:imagePicker animated:YES completion:nil];
+            [self.parentViewController presentViewController:imagePicker animated:YES completion:nil];
 
         }
         else{

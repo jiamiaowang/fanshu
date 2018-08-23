@@ -46,6 +46,10 @@
 		D04A036320FF03D8007F11DD /* FSVoteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A036120FF03D8007F11DD /* FSVoteOptionCell.xib */; };
 		D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036620FF1658007F11DD /* FSVoteOptionHeader.m */; };
 		D04A036A20FF1FA4007F11DD /* FSVoteOptionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D04A036920FF1FA4007F11DD /* FSVoteOptionFooter.m */; };
+		D0556384212D531F009B58A4 /* FSToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0556383212D531F009B58A4 /* FSToolView.m */; };
+		D05563AE212D7268009B58A4 /* FSImageTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = D05563AD212D7268009B58A4 /* FSImageTextAttachment.m */; };
+		D058B1B2212EA5DB00C083CD /* NSAttributedString+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = D058B1B1212EA5DB00C083CD /* NSAttributedString+RichText.m */; };
+		D058B1B5212EA98D00C083CD /* FSArticleCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058B1B4212EA98D00C083CD /* FSArticleCoverController.m */; };
 		D071B3E8211C0CE4004A8A4E /* FSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */; };
 		D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */; };
 		D0781416211AD42800579643 /* FSVotePollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0781415211AD42800579643 /* FSVotePollCell.m */; };
@@ -59,6 +63,9 @@
 		D0E924E120F2192900BA26CF /* FSTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924DF20F2192900BA26CF /* FSTabBarViewController.m */; };
 		D0E924E820F21A9500BA26CF /* FSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924E720F21A9500BA26CF /* FSMainViewController.m */; };
 		D0E924ED20F2202F00BA26CF /* FSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E924EC20F2202F00BA26CF /* FSMineViewController.m */; };
+		D0ED98E8212C12AC00036BE0 /* FSMoreArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ED98E7212C12AC00036BE0 /* FSMoreArticleController.m */; };
+		D0ED98EB212C41A500036BE0 /* FSPublishArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ED98EA212C41A500036BE0 /* FSPublishArticleController.m */; };
+		D0ED98EE212C43C000036BE0 /* FSArticleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0ED98ED212C43C000036BE0 /* FSArticleHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +142,14 @@
 		D04A036620FF1658007F11DD /* FSVoteOptionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionHeader.m; path = vote/view/voteOption/FSVoteOptionHeader.m; sourceTree = "<group>"; };
 		D04A036820FF1FA4007F11DD /* FSVoteOptionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSVoteOptionFooter.h; path = vote/view/voteOption/FSVoteOptionFooter.h; sourceTree = "<group>"; };
 		D04A036920FF1FA4007F11DD /* FSVoteOptionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSVoteOptionFooter.m; path = vote/view/voteOption/FSVoteOptionFooter.m; sourceTree = "<group>"; };
+		D0556382212D531F009B58A4 /* FSToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSToolView.h; path = article/view/FSToolView.h; sourceTree = "<group>"; };
+		D0556383212D531F009B58A4 /* FSToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSToolView.m; path = article/view/FSToolView.m; sourceTree = "<group>"; };
+		D05563AC212D7268009B58A4 /* FSImageTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSImageTextAttachment.h; path = article/view/FSImageTextAttachment.h; sourceTree = "<group>"; };
+		D05563AD212D7268009B58A4 /* FSImageTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSImageTextAttachment.m; path = article/view/FSImageTextAttachment.m; sourceTree = "<group>"; };
+		D058B1B0212EA5DB00C083CD /* NSAttributedString+RichText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+RichText.h"; sourceTree = "<group>"; };
+		D058B1B1212EA5DB00C083CD /* NSAttributedString+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RichText.m"; sourceTree = "<group>"; };
+		D058B1B3212EA98D00C083CD /* FSArticleCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticleCoverController.h; path = article/controller/FSArticleCoverController.h; sourceTree = "<group>"; };
+		D058B1B4212EA98D00C083CD /* FSArticleCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticleCoverController.m; path = article/controller/FSArticleCoverController.m; sourceTree = "<group>"; };
 		D071B3E5211C0CE4004A8A4E /* FSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSLoginViewController.h; path = "我的/controller/FSLoginViewController.h"; sourceTree = "<group>"; };
 		D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSLoginViewController.m; path = "我的/controller/FSLoginViewController.m"; sourceTree = "<group>"; };
 		D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUnderlineTextField.h; path = other/view/FSUnderlineTextField.h; sourceTree = "<group>"; };
@@ -160,6 +175,12 @@
 		D0E924E720F21A9500BA26CF /* FSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMainViewController.m; path = "首页/controller/FSMainViewController.m"; sourceTree = "<group>"; };
 		D0E924EB20F2202F00BA26CF /* FSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMineViewController.h; path = "我的/controller/FSMineViewController.h"; sourceTree = "<group>"; };
 		D0E924EC20F2202F00BA26CF /* FSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMineViewController.m; path = "我的/controller/FSMineViewController.m"; sourceTree = "<group>"; };
+		D0ED98E6212C12AC00036BE0 /* FSMoreArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMoreArticleController.h; path = article/controller/FSMoreArticleController.h; sourceTree = "<group>"; };
+		D0ED98E7212C12AC00036BE0 /* FSMoreArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMoreArticleController.m; path = article/controller/FSMoreArticleController.m; sourceTree = "<group>"; };
+		D0ED98E9212C41A400036BE0 /* FSPublishArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishArticleController.h; path = article/controller/FSPublishArticleController.h; sourceTree = "<group>"; };
+		D0ED98EA212C41A500036BE0 /* FSPublishArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishArticleController.m; path = article/controller/FSPublishArticleController.m; sourceTree = "<group>"; };
+		D0ED98EC212C43C000036BE0 /* FSArticleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticleHeaderView.h; path = article/view/FSArticleHeaderView.h; sourceTree = "<group>"; };
+		D0ED98ED212C43C000036BE0 /* FSArticleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticleHeaderView.m; path = article/view/FSArticleHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +322,12 @@
 		D039756F21199BAC008222E5 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED98E6212C12AC00036BE0 /* FSMoreArticleController.h */,
+				D0ED98E7212C12AC00036BE0 /* FSMoreArticleController.m */,
+				D0ED98E9212C41A400036BE0 /* FSPublishArticleController.h */,
+				D0ED98EA212C41A500036BE0 /* FSPublishArticleController.m */,
+				D058B1B3212EA98D00C083CD /* FSArticleCoverController.h */,
+				D058B1B4212EA98D00C083CD /* FSArticleCoverController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -308,6 +335,12 @@
 		D039757021199BB2008222E5 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED98EC212C43C000036BE0 /* FSArticleHeaderView.h */,
+				D0ED98ED212C43C000036BE0 /* FSArticleHeaderView.m */,
+				D0556382212D531F009B58A4 /* FSToolView.h */,
+				D0556383212D531F009B58A4 /* FSToolView.m */,
+				D05563AC212D7268009B58A4 /* FSImageTextAttachment.h */,
+				D05563AD212D7268009B58A4 /* FSImageTextAttachment.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -367,6 +400,8 @@
 		D03AFECF20F3500800639F44 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				D058B1B0212EA5DB00C083CD /* NSAttributedString+RichText.h */,
+				D058B1B1212EA5DB00C083CD /* NSAttributedString+RichText.m */,
 				D03AFED020F350A400639F44 /* UIBarButtonItem+Extension.h */,
 				D03AFED120F350A400639F44 /* UIBarButtonItem+Extension.m */,
 				D004367720F8B1F500AA1360 /* UIButton+Extension.h */,
@@ -684,23 +719,30 @@
 				D004367620F8B10200AA1360 /* FSSectionHeader.m in Sources */,
 				D004367920F8B1F500AA1360 /* UIButton+Extension.m in Sources */,
 				D013BD072123E48500B3BD64 /* FSPublishVoteTitle.m in Sources */,
+				D0ED98EB212C41A500036BE0 /* FSPublishArticleController.m in Sources */,
 				D013BD0A21240DD800B3BD64 /* FSPublishVoteWithImgCell.m in Sources */,
 				D04A036220FF03D8007F11DD /* FSVoteOptionCell.m in Sources */,
+				D0ED98EE212C43C000036BE0 /* FSArticleHeaderView.m in Sources */,
 				D01037C720FDA6D20027B48A /* FSVoteOptionViewController.m in Sources */,
 				D013BD1C21244BCF00B3BD64 /* FSPublishVoteNoImgController.m in Sources */,
 				D004366F20F895EB00AA1360 /* FSAtricleViewCell.m in Sources */,
+				D058B1B2212EA5DB00C083CD /* NSAttributedString+RichText.m in Sources */,
 				D0E924C020F1F3BA00BA26CF /* AppDelegate.m in Sources */,
+				D0556384212D531F009B58A4 /* FSToolView.m in Sources */,
 				D0444D0C2120414A00A8AC44 /* FSNetworkingTool.m in Sources */,
 				D01A11C1212586AD000557A7 /* UILabel+Extension.m in Sources */,
 				D013BD1F21244C8D00B3BD64 /* UIView+ViewController.m in Sources */,
 				D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */,
 				D0038F732118798600992E89 /* FSVoteOptionNoImgCell.m in Sources */,
+				D05563AE212D7268009B58A4 /* FSImageTextAttachment.m in Sources */,
 				D0E924ED20F2202F00BA26CF /* FSMineViewController.m in Sources */,
 				D004366820F88AF900AA1360 /* FSVoteOptions.m in Sources */,
 				D03AFEC720F3420D00639F44 /* FSSearchBar.m in Sources */,
 				D078141B211B07FE00579643 /* FSMoreVoteController.m in Sources */,
+				D0ED98E8212C12AC00036BE0 /* FSMoreArticleController.m in Sources */,
 				D004366B20F8934800AA1360 /* FSVoteAndArticle.m in Sources */,
 				D033D0E720F38A6200B31A64 /* FSArticle.m in Sources */,
+				D058B1B5212EA98D00C083CD /* FSArticleCoverController.m in Sources */,
 				D00D84952122A3AB0067F9A2 /* FSRegisterViewController.m in Sources */,
 				D04A036A20FF1FA4007F11DD /* FSVoteOptionFooter.m in Sources */,
 				D00B8118212730CD00BD89A8 /* FSPublishVoteNoImgCell.m in Sources */,

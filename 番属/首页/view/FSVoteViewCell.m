@@ -43,7 +43,6 @@
         [_voteimageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(self.mas_right).mas_offset(-10);
             make.centerY.equalTo(self);
-//            make.size.equalTo(self).sizeOffset(CGSizeMake(25-self.bounds.size.width, -15));
             make.width.mas_equalTo(25);
             make.height.mas_equalTo(25);
         }];

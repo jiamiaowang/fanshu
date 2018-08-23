@@ -46,7 +46,6 @@ extern BOOL islogin;
     
     [self loadNewData];
     self.edgesForExtendedLayout=UIRectEdgeNone;
-    self.automaticallyAdjustsScrollViewInsets=NO;
     
 }
 
@@ -56,6 +55,9 @@ extern BOOL islogin;
     
     [self.view addSubview:self.tableView];
     
+    
+    
+
     //配置导航栏
     UIBarButtonItem *backItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem=backItem;

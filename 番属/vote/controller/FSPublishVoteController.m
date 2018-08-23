@@ -43,6 +43,7 @@
     self.navigationItem.leftBarButtonItem=backItem;
 }
 -(void)back{
+    [self.view endEditing:YES];
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"确定放弃编辑，离开页面" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *confirmAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.navigationController popViewControllerAnimated:YES];
