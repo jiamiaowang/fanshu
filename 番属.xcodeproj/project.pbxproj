@@ -50,6 +50,8 @@
 		D05563AE212D7268009B58A4 /* FSImageTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = D05563AD212D7268009B58A4 /* FSImageTextAttachment.m */; };
 		D058B1B2212EA5DB00C083CD /* NSAttributedString+RichText.m in Sources */ = {isa = PBXBuildFile; fileRef = D058B1B1212EA5DB00C083CD /* NSAttributedString+RichText.m */; };
 		D058B1B5212EA98D00C083CD /* FSArticleCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058B1B4212EA98D00C083CD /* FSArticleCoverController.m */; };
+		D058D52F212FEB5700A37070 /* FSArticleContent.m in Sources */ = {isa = PBXBuildFile; fileRef = D058D52E212FEB5700A37070 /* FSArticleContent.m */; };
+		D058D53221300B4800A37070 /* FSArticleContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058D53121300B4800A37070 /* FSArticleContentController.m */; };
 		D071B3E8211C0CE4004A8A4E /* FSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */; };
 		D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D071B3EB211C1810004A8A4E /* FSUnderlineTextField.m */; };
 		D0781416211AD42800579643 /* FSVotePollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0781415211AD42800579643 /* FSVotePollCell.m */; };
@@ -150,6 +152,10 @@
 		D058B1B1212EA5DB00C083CD /* NSAttributedString+RichText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+RichText.m"; sourceTree = "<group>"; };
 		D058B1B3212EA98D00C083CD /* FSArticleCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticleCoverController.h; path = article/controller/FSArticleCoverController.h; sourceTree = "<group>"; };
 		D058B1B4212EA98D00C083CD /* FSArticleCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticleCoverController.m; path = article/controller/FSArticleCoverController.m; sourceTree = "<group>"; };
+		D058D52D212FEB5700A37070 /* FSArticleContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticleContent.h; path = article/model/FSArticleContent.h; sourceTree = "<group>"; };
+		D058D52E212FEB5700A37070 /* FSArticleContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticleContent.m; path = article/model/FSArticleContent.m; sourceTree = "<group>"; };
+		D058D53021300B4800A37070 /* FSArticleContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSArticleContentController.h; path = article/controller/FSArticleContentController.h; sourceTree = "<group>"; };
+		D058D53121300B4800A37070 /* FSArticleContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSArticleContentController.m; path = article/controller/FSArticleContentController.m; sourceTree = "<group>"; };
 		D071B3E5211C0CE4004A8A4E /* FSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSLoginViewController.h; path = "我的/controller/FSLoginViewController.h"; sourceTree = "<group>"; };
 		D071B3E6211C0CE4004A8A4E /* FSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSLoginViewController.m; path = "我的/controller/FSLoginViewController.m"; sourceTree = "<group>"; };
 		D071B3EA211C1810004A8A4E /* FSUnderlineTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUnderlineTextField.h; path = other/view/FSUnderlineTextField.h; sourceTree = "<group>"; };
@@ -328,6 +334,8 @@
 				D0ED98EA212C41A500036BE0 /* FSPublishArticleController.m */,
 				D058B1B3212EA98D00C083CD /* FSArticleCoverController.h */,
 				D058B1B4212EA98D00C083CD /* FSArticleCoverController.m */,
+				D058D53021300B4800A37070 /* FSArticleContentController.h */,
+				D058D53121300B4800A37070 /* FSArticleContentController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -350,6 +358,8 @@
 			children = (
 				D033D0E520F38A6200B31A64 /* FSArticle.h */,
 				D033D0E620F38A6200B31A64 /* FSArticle.m */,
+				D058D52D212FEB5700A37070 /* FSArticleContent.h */,
+				D058D52E212FEB5700A37070 /* FSArticleContent.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -755,8 +765,10 @@
 				D0781416211AD42800579643 /* FSVotePollCell.m in Sources */,
 				D03975742119C794008222E5 /* FSVotePollController.m in Sources */,
 				D004367C20F8D50C00AA1360 /* FSVoteViewCell.m in Sources */,
+				D058D52F212FEB5700A37070 /* FSArticleContent.m in Sources */,
 				D004366520F88A9800AA1360 /* FSVote.m in Sources */,
 				D03AFED620F356BF00639F44 /* FSImageHeader.m in Sources */,
+				D058D53221300B4800A37070 /* FSArticleContentController.m in Sources */,
 				D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */,
 				D013BD132124338D00B3BD64 /* FSPublishVoteController.m in Sources */,
 				D071B3E8211C0CE4004A8A4E /* FSLoginViewController.m in Sources */,

@@ -7,8 +7,14 @@
 //
 
 #import "FSArticleCoverController.h"
+//view
 #import "FSArticleHeaderView.h"
+#import "FSMoreArticleController.h"
 #import "UILabel+Extension.h"
+
+#import "FSNetworkingTool.h"
+//model
+#import "FSArticleContent.h"
 @interface FSArticleCoverController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property(nonatomic,strong)FSArticleHeaderView *headerView;
 @property(nonatomic,strong)NSString *articleTitle;
@@ -48,7 +54,16 @@
     
 }
 -(void)publish{
-    
+    [self.view endEditing:YES];
+    if(!self.headerView.image){
+        [UILabel showTip:@"请添加封面" toView:self.view centerYOffset:-64];
+        return;
+    }
+    if(self.articleTitle.length==0){
+        [UILabel showTip:@"文章标题不能为空" toView:self.view centerYOffset:-64];
+        return;
+    }
+    [self uploadData];
 }
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
@@ -111,5 +126,42 @@
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+#pragma mark - 上传
+-(void)uploadData{
+    NSMutableDictionary *dict=[NSMutableDictionary dictionary];
+    [dict setValue:self.articleTitle forKey:@"articleTitle"];
+    [dict setValue:self.content.contentStr forKey:@"contentStr"];
+    
+    [[FSNetworkingTool shareNetworkingTool]POST:@"article/uploadArticle.php" parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        UIImage *headerImg=self.headerView.image;
+        NSData *headerImageData=UIImageJPEGRepresentation(headerImg, 0.5);
+        [formData appendPartWithFileData:headerImageData name:@"headerImg" fileName:@"headerImage.jpg" mimeType:@"image/jpg/png/jpeg"];
+        if(self.content.imgArr.count>0){
+            for (int i=0; i<self.content.imgArr.count; i++) {
+                UIImage *image=self.content.imgArr[i];
+                //0.5表示质量
+                NSData *imageData=UIImageJPEGRepresentation(image, 0.5);
+                //在网络开发中，上传文件时，是文件不允许被覆盖，文件重名
+                NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+                [formatter setDateFormat:@"yyyymmddhhmmss"];
+                NSString *dateString=[formatter stringFromDate:[NSDate date]];
+                NSString *fileName=[NSString stringWithFormat:@"%@.jpg",dateString];
+                
+                [formData appendPartWithFileData:imageData name:@"uploadImg[]" fileName:fileName mimeType:@"image/jpg/png/jpeg"];
+            }
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+        [self publishSuccess];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+    }];
+}
+-(void)publishSuccess{
+    FSMoreArticleController *moreVC=self.navigationController.viewControllers[1];
+    [self.navigationController popToViewController:moreVC animated:YES];
+}
 @end

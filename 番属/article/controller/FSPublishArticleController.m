@@ -19,6 +19,9 @@
 #import "UILabel+Extension.h"
 #import "NSAttributedString+RichText.h"
 
+//model
+#import "FSArticleContent.h"
+
 #import "FSArticleCoverController.h"
 #import <Masonry.h>
 @interface FSPublishArticleController ()<UITextViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -111,15 +114,20 @@
 }
 -(void)nextStep{
     [self.view endEditing:YES];
-    [self uploadData:[self.textView.attributedText getPlainString] withImageArray:[self.textView.attributedText getImgaeArray]];
     
-}
-- (void)uploadData:(id)contentData withImageArray:(NSArray *)imageArr
-{
+    if(!(self.textView.attributedText.length>0)){
+        [UILabel showTip:@"内容不能为空" toView:self.view centerYOffset:-64];
+        return;
+    }
+    FSArticleContent *content=[[FSArticleContent alloc]init];
+    content.contentStr=[self.textView.attributedText getPlainString];
+    content.imgArr=[self.textView.attributedText getImgaeArray];
     
     FSArticleCoverController *coverVC=[[FSArticleCoverController alloc]init];
+    coverVC.content=content;
     [self.navigationController pushViewController:coverVC animated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -252,7 +260,7 @@
     
     
 }
-#pragma amrk - 添加图片
+#pragma mark - 添加图片
 -(void)addPicture{
     //
     self.imageRange=self.textView.selectedRange;
@@ -306,7 +314,7 @@
     }
     CGFloat imageHeight=image.size.height*(ScreenWidth-30.0)/image.size.width;
     FSImageTextAttachment *imageTextAttachment=[FSImageTextAttachment new];
-    imageTextAttachment.imageTag = @"UIImageView";
+    imageTextAttachment.imageTag = RICHTEXT_IMAGE;
     imageTextAttachment.image =image;
     
     //

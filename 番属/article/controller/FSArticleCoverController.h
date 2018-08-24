@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class FSArticleContent;
 @interface FSArticleCoverController : UIViewController
-
+@property(nonatomic,strong)FSArticleContent *content;
 @end

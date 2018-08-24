@@ -61,11 +61,11 @@ extern BOOL islogin;
 }
 -(void)publishArticle{
     //未登录
-//    if(!islogin){
-//        FSLoginViewController *loginVC=[[FSLoginViewController alloc]init];
-//        [self presentViewController:loginVC animated:YES completion:nil];
-//        return;
-//    }
+    if(!islogin){
+        FSLoginViewController *loginVC=[[FSLoginViewController alloc]init];
+        [self presentViewController:loginVC animated:YES completion:nil];
+        return;
+    }
     
     self.hidesBottomBarWhenPushed=YES;
     FSPublishArticleController *publishArtcleVC=[[FSPublishArticleController alloc]init];
@@ -113,6 +113,9 @@ extern BOOL islogin;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 #pragma mark - 网络加载
 -(void)loadNewData{
