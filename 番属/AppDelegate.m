@@ -28,27 +28,45 @@ BOOL islogin;  //用户是否登陆
     return YES;
 }
 -(void)checkLogin{
-    [[FSNetworkingTool shareNetworkingTool]GET:@"logined.php" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    //保存到偏好设置
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString *accout=[defaults objectForKey:@"account"];
+    if(accout){
+       NSMutableDictionary *dict=[NSMutableDictionary dictionary];
+        [dict setValue:accout forKey:@"account"];
+        [[FSNetworkingTool shareNetworkingTool]POST:@"logined.php" parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            NSLog(@"%@",responseObject);
+            if([responseObject[@"success"] isEqualToString:@"success"]){
+                islogin=true;
+            }
+            else{
+                islogin=false;
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"%@",error);
+        }];
         
-        islogin=[responseObject[@"login"] intValue];
-//        NSLog(@"%d",islogin);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-    }];
-}
--(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
-    
-    //我的  判断是否登录
-    if(viewController==[tabBarController.viewControllers objectAtIndex:1]){
-        if(!islogin){
-            FSLoginViewController *login = [[FSLoginViewController alloc] init];
-
-            [((UINavigationController *)viewController) presentViewController:login animated:YES completion:nil];
-        }
+ 
     }
-    return YES;
+    else{
+        islogin=false;
+
+    }
+        
+    
 }
+//-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+//    
+//    //我的  判断是否登录
+//    if(viewController==[tabBarController.viewControllers objectAtIndex:1]){
+//        if(!islogin){
+//            FSLoginViewController *login = [[FSLoginViewController alloc] init];
+//
+//            [((UINavigationController *)viewController) presentViewController:login animated:YES completion:nil];
+//        }
+//    }
+//    return YES;
+//}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

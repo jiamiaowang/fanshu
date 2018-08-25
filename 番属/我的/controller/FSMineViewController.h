@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FSMineViewController : UITableViewController
+@interface FSMineViewController : UIViewController
 
 @end

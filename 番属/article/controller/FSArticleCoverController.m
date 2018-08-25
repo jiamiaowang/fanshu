@@ -95,7 +95,7 @@
 -(void)selectPhoto:(int)index{
     UIImagePickerController *imagePicker=[[UIImagePickerController alloc]init];
     imagePicker.delegate=self;
-    imagePicker.allowsEditing=YES;
+    imagePicker.allowsEditing=NO;
     if(index==0){
         //判断是否支持相机
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){

@@ -110,7 +110,17 @@
     self.navigationItem.rightBarButtonItem=rightItem;
 }
 -(void)back{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.view endEditing:YES];
+    WeakSelf;
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"确定放弃编辑，离开页面" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    [alertController addAction:confirmAction];
+    UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+
 }
 -(void)nextStep{
     [self.view endEditing:YES];
@@ -285,7 +295,7 @@
 -(void)selectPhoto:(int)index{
     UIImagePickerController *imagePicker=[[UIImagePickerController alloc]init];
     imagePicker.delegate=self;
-    imagePicker.allowsEditing=YES;
+    imagePicker.allowsEditing=NO;
     if(index==0){
         //判断是否支持相机
         if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){

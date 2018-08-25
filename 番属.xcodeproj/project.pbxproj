@@ -33,6 +33,8 @@
 		D01616B0213126700057C970 /* NSArray+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = D01616AF213126700057C970 /* NSArray+Regular.m */; };
 		D01616B3213131510057C970 /* NSString+Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = D01616B2213131510057C970 /* NSString+Regular.m */; };
 		D01616B621313F820057C970 /* FSMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01616B521313F820057C970 /* FSMineHeaderView.m */; };
+		D01616BA21314A820057C970 /* FSUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D01616B921314A820057C970 /* FSUserInfo.m */; };
+		D01616BD21315ED30057C970 /* FSLogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D01616BC21315ED30057C970 /* FSLogoutView.m */; };
 		D01A11BA21255A32000557A7 /* FSPublishVoteFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11B921255A32000557A7 /* FSPublishVoteFooter.m */; };
 		D01A11BE21256566000557A7 /* FSPublishFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11BD21256566000557A7 /* FSPublishFooter.m */; };
 		D01A11C1212586AD000557A7 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D01A11C0212586AD000557A7 /* UILabel+Extension.m */; };
@@ -130,6 +132,10 @@
 		D01616B2213131510057C970 /* NSString+Regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Regular.m"; path = "other/category/NSString+Regular.m"; sourceTree = "<group>"; };
 		D01616B421313F820057C970 /* FSMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSMineHeaderView.h; path = "我的/view/FSMineHeaderView.h"; sourceTree = "<group>"; };
 		D01616B521313F820057C970 /* FSMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSMineHeaderView.m; path = "我的/view/FSMineHeaderView.m"; sourceTree = "<group>"; };
+		D01616B821314A820057C970 /* FSUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSUserInfo.h; path = "我的/model/FSUserInfo.h"; sourceTree = "<group>"; };
+		D01616B921314A820057C970 /* FSUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSUserInfo.m; path = "我的/model/FSUserInfo.m"; sourceTree = "<group>"; };
+		D01616BB21315ED30057C970 /* FSLogoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSLogoutView.h; path = "我的/view/FSLogoutView.h"; sourceTree = "<group>"; };
+		D01616BC21315ED30057C970 /* FSLogoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSLogoutView.m; path = "我的/view/FSLogoutView.m"; sourceTree = "<group>"; };
 		D01A11B821255A32000557A7 /* FSPublishVoteFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishVoteFooter.h; path = vote/view/publishVote/FSPublishVoteFooter.h; sourceTree = "<group>"; };
 		D01A11B921255A32000557A7 /* FSPublishVoteFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSPublishVoteFooter.m; path = vote/view/publishVote/FSPublishVoteFooter.m; sourceTree = "<group>"; };
 		D01A11BC21256566000557A7 /* FSPublishFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSPublishFooter.h; path = vote/view/publishVote/FSPublishFooter.h; sourceTree = "<group>"; };
@@ -258,6 +264,15 @@
 			name = publishVote;
 			sourceTree = "<group>";
 		};
+		D01616B721314A5A0057C970 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D01616B821314A820057C970 /* FSUserInfo.h */,
+				D01616B921314A820057C970 /* FSUserInfo.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		D01A11B721254C92000557A7 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +298,8 @@
 			children = (
 				D01616B421313F820057C970 /* FSMineHeaderView.h */,
 				D01616B521313F820057C970 /* FSMineHeaderView.m */,
+				D01616BB21315ED30057C970 /* FSLogoutView.h */,
+				D01616BC21315ED30057C970 /* FSLogoutView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -624,6 +641,7 @@
 			children = (
 				D0E924EA20F21E2600BA26CF /* controller */,
 				D03975452119872E008222E5 /* view */,
+				D01616B721314A5A0057C970 /* model */,
 			);
 			name = "我的";
 			sourceTree = "<group>";
@@ -784,6 +802,7 @@
 				D01A11C1212586AD000557A7 /* UILabel+Extension.m in Sources */,
 				D058D53521303D1600A37070 /* FSArticleShowHeader.m in Sources */,
 				D013BD1F21244C8D00B3BD64 /* UIView+ViewController.m in Sources */,
+				D01616BA21314A820057C970 /* FSUserInfo.m in Sources */,
 				D071B3EC211C1810004A8A4E /* FSUnderlineTextField.m in Sources */,
 				D0038F732118798600992E89 /* FSVoteOptionNoImgCell.m in Sources */,
 				D05563AE212D7268009B58A4 /* FSImageTextAttachment.m in Sources */,
@@ -811,6 +830,7 @@
 				D004367C20F8D50C00AA1360 /* FSVoteViewCell.m in Sources */,
 				D058D52F212FEB5700A37070 /* FSArticleContent.m in Sources */,
 				D004366520F88A9800AA1360 /* FSVote.m in Sources */,
+				D01616BD21315ED30057C970 /* FSLogoutView.m in Sources */,
 				D03AFED620F356BF00639F44 /* FSImageHeader.m in Sources */,
 				D058D53221300B4800A37070 /* FSArticleContentController.m in Sources */,
 				D04A036720FF1658007F11DD /* FSVoteOptionHeader.m in Sources */,

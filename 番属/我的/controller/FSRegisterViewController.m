@@ -120,6 +120,11 @@ extern BOOL islogin;
 
 }
 -(void)closeVC{
+    //保存到偏好设置
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setValue:self.accountText.text forKey:@"account"];
+    [defaults setValue:self.passwordText.text forKey:@"password"];
+
     UIViewController *vc = self.presentingViewController;
     while (vc.presentingViewController) {
         vc = vc.presentingViewController;
@@ -190,6 +195,7 @@ extern BOOL islogin;
     if([result isEqualToString:@"success"]){
         islogin=true;
         [self closeVC];
+        
         return;
     }
     else if([result isEqualToString:@"already"]){

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class FSUserInfo;
 @interface FSMineHeaderView : UIView
-
+@property(nonatomic,strong)FSUserInfo *info;
+@property(nonatomic,strong)UIImage *image;
+@property(nonatomic,copy)void (^gotoLoginBlcok)();
+@property(nonatomic,copy)void (^addAvatarImgBlcok)();
 @end

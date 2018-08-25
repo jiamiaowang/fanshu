@@ -208,6 +208,11 @@ extern BOOL islogin;
     islogin=true;
 
     [self dismissViewControllerAnimated:YES completion:nil];
+    //保存到偏好设置
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setValue:self.accountText.text forKey:@"account"];
+    [defaults setValue:self.passwordText.text forKey:@"password"];
+    
 }
 
 #pragma mark - 文本框

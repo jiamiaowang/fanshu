@@ -91,7 +91,6 @@
         self.nameText.text=@"";
     }
     if(option.image){
-        NSLog(@"");
         self.optionImageView.image=option.image;
     }
     else{

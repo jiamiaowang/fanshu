@@ -44,9 +44,10 @@
 }
 -(void)back{
     [self.view endEditing:YES];
+    WeakSelf;
     UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"确定放弃编辑，离开页面" message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *confirmAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self.navigationController popViewControllerAnimated:YES];
+        [weakSelf.navigationController popViewControllerAnimated:YES];
     }];
     [alertController addAction:confirmAction];
     UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
