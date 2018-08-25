@@ -1,5 +1,5 @@
 //
-//  FSArticleContentController.h
+//  FSArticleShowHeader.h
 //  番属
 //
 //  Created by 王佳苗 on 2018/8/24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class FSArticle;
-@interface FSArticleContentController : UIViewController
+@interface FSArticleShowHeader : UIView
 @property(nonatomic,strong)FSArticle *article;
 @end

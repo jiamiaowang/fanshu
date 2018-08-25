@@ -17,6 +17,7 @@
 //跳转界面
 #import "FSPublishArticleController.h"
 #import "FSLoginViewController.h"
+#import "FSArticleContentController.h"
 
 #import <MJExtension.h>
 #import <MJRefresh.h>
@@ -102,7 +103,10 @@ extern BOOL islogin;
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.hidesBottomBarWhenPushed=YES;
+
     FSAtricleViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"atricleCell" forIndexPath:indexPath];
     cell.article=self.articleArray[indexPath.section];
     return cell;
@@ -114,8 +118,12 @@ extern BOOL islogin;
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
 }
+//详情界面
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    FSArticle *article=self.articleArray[indexPath.section];
+    FSArticleContentController *contentVC=[[FSArticleContentController alloc]init];
+    contentVC.article=article;
+    [self.navigationController pushViewController:contentVC animated:YES];
 }
 #pragma mark - 网络加载
 -(void)loadNewData{

@@ -9,14 +9,18 @@
 #import "FSArticleHeaderView.h"
 #import "FSUnderlineTextField.h"
 #import <Masonry.h>
+#import <UIImageView+WebCache.h>
 @interface FSArticleHeaderView()<UITextFieldDelegate>
 @property(nonatomic,strong)FSUnderlineTextField *textField;
 @property(nonatomic,strong)UIImageView *mainImageView;
+
 @end
 @implementation FSArticleHeaderView
 -(instancetype)initWithFrame:(CGRect)frame{
     self=[super initWithFrame:frame];
     if(self){
+        
+        
         _textField=[FSUnderlineTextField underlineTextField:@"请输入文章标题" fontSize:18];
         _textField.textAlignment=NSTextAlignmentCenter;
         [self addSubview:_textField];
@@ -27,6 +31,8 @@
             make.centerX.equalTo(self);
         }];
         _textField.delegate=self;
+        
+        
         
         
         _mainImageView=[[UIImageView alloc]init];
@@ -53,6 +59,8 @@
     _image=image;
     self.mainImageView.image=image;
 }
+
+
 -(void)addPhoto{
     if(self.addPhotoBlock){
         self.addPhotoBlock();

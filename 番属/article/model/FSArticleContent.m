@@ -9,5 +9,10 @@
 #import "FSArticleContent.h"
 
 @implementation FSArticleContent
++ (NSDictionary *)mj_objectClassInArray{
+    return @{
+             @"imgArr" : @"NSSrting",       //前边，是属性数组的名字，后边就是类名
+            };
+}
 
 @end

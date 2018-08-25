@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface FSArticleContent : NSObject
-@property(nonatomic,strong)id contentStr;
+@property(nonatomic,strong)NSString *contentStr;
 @property(nonatomic,strong)NSArray *imgArr;
 @end

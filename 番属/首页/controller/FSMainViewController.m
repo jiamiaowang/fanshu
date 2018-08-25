@@ -27,6 +27,7 @@
 #import "FSVotePollController.h"
 #import "FSSearchViewController.h"
 #import "FSLoginViewController.h"
+#import "FSArticleContentController.h"
 
 #import "FSMoreVoteController.h"
 #import "FSMoreArticleController.h"
@@ -236,7 +237,14 @@ extern BOOL islogin;
         [self isVoted:vote];
     }
     else{
-        
+        self.hidesBottomBarWhenPushed=YES;
+        FSArticle *article=self.voteAndArticle.article[indexPath.section-1];
+        FSArticleContentController *contentVC=[[FSArticleContentController alloc]init];
+        contentVC.article=article;
+        [self.navigationController pushViewController:contentVC animated:YES
+         ];
+        self.hidesBottomBarWhenPushed=NO;
+
     }
 }
 //根据请求结果决定该跳转的界面

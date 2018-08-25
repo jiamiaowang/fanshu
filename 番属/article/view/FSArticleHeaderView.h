@@ -12,4 +12,5 @@
 @property(nonatomic,strong)UIImage *image;
 @property(nonatomic,copy)void (^addPhotoBlock)();  //添加封面图片
 @property(nonatomic,copy)void (^titleEndEditBlock)(NSString *);
+
 @end
