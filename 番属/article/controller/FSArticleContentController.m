@@ -38,13 +38,14 @@
     // Do any additional setup after loading the view.
     
     [self.view addSubview:self.tableView];
+
     [self setupnavigation];
     [self setupHeaderView];
     
     [self loadData];
     
-    self.edgesForExtendedLayout=UIRectEdgeNone;
-    self.automaticallyAdjustsScrollViewInsets=NO;
+    self.edgesForExtendedLayout=UIRectEdgeBottom;
+//    self.automaticallyAdjustsScrollViewInsets=NO;
 }
 -(void)setupnavigation{
     //配置导航栏
@@ -65,7 +66,7 @@
 #pragma mark - 懒加载
 -(UITableView *)tableView{
     if(_tableView==nil){
-        _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, self.view.frame.size.height-64) style:UITableViewStylePlain];
         _tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
         _tableView.delegate=self;
         _tableView.dataSource=self;

@@ -18,6 +18,7 @@ static int const imageViewCount=3;
 @property(nonatomic,strong)UIPageControl *pageControl;
 @property(nonatomic,strong)NSTimer *timer;
 @property(nonatomic,assign)int count;
+@property(nonatomic,assign)BOOL isAddTimer;  //是否以开启定时器
 @end
 
 @implementation FSImageHeader
@@ -38,7 +39,6 @@ static int const imageViewCount=3;
         _pageControl=[[UIPageControl alloc]init];
         _pageControl.userInteractionEnabled=YES;
         _pageControl.pageIndicatorTintColor=[UIColor lightGrayColor];
-//        _pageControl.currentPageIndicatorTintColor=FSTabBarSelectedColor;
         [self addSubview:_pageControl];
         [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
@@ -79,9 +79,11 @@ static int const imageViewCount=3;
     
     [self setupContent];
     //有数据才开启定时器
-    if(self.count!=0){
+    if(!self.isAddTimer && self.count!=0){
         [self addTimer];
+        self.isAddTimer=true;
     }
+    
 }
 
 -(void)setupContent{
